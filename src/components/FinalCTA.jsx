@@ -6,7 +6,7 @@ const FinalCTA = () => {
   const stats = [
     { icon: <Users className="w-5 h-5" />, value: '150–300', label: 'Verified Buyers' },
     { icon: <BarChart3 className="w-5 h-5" />, value: '60–80', label: 'Meetings / Supplier' },
-    { icon: <Clock className="w-5 h-5" />, value: '7 Days', label: '4 Cities, Fully Managed' },
+    { icon: <Clock className="w-5 h-5" />, value: '6 Days', label: '4 Cities, Fully Managed' },
   ];
 
   return (

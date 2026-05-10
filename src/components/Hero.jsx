@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Calendar, CheckCircle2 } from 'lucide-react';
+import { MapPin, Calendar, CheckCircle2, Globe } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -43,7 +43,7 @@ const Hero = () => {
           </p>
 
           <p className="text-base text-secondary-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            4 Cities. 7 Days. 150-300 Verified Buyers. Direct Table Meetings. Zero Wasted Time.
+            3 Cities. 6 Days. 150–300 Verified Buyers. Direct Table Meetings. Zero Wasted Time.
           </p>
 
           {/* Date & Location Strip */}
@@ -55,16 +55,16 @@ const Hero = () => {
           >
             <div className="flex items-center gap-3 text-white">
               <div className="w-10 h-10 rounded-full bg-primary-500/20 flex items-center justify-center">
-                <Calendar className="w-5 h-5 text-primary-300" />
+                <Globe className="w-5 h-5 text-primary-300" />
               </div>
-              <span className="text-lg font-semibold tracking-wide">3–9 July 2026</span>
+              <span className="text-lg font-semibold tracking-wide">3–8 July 2026</span>
             </div>
             <div className="hidden md:block w-px h-10 bg-white/20"></div>
             <div className="flex items-center gap-3 text-white">
               <div className="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-accent-300" />
               </div>
-              <span className="text-lg font-semibold tracking-wide">Delhi • Mumbai • Hyd • Chennai</span>
+              <span className="text-lg font-semibold tracking-wide">Delhi • Mumbai • Chennai</span>
             </div>
           </motion.div>
 
@@ -83,7 +83,7 @@ const Hero = () => {
             </a>
             <a href="#register-buyer" className="btn-secondary flex-1 group">
               <span className="relative z-10 flex flex-col items-center">
-                <span className="text-sm font-normal text-slate-500 mb-1 group-hover:text-slate-700 transition-colors">I'm an Indian Agent</span>
+                <span className="text-sm font-normal text-secondary-500 mb-1 group-hover:text-secondary-700 transition-colors">I'm an Indian Agent</span>
                 <span className="flex items-center gap-2 text-primary-600">Register as Buyer <span className="group-hover:translate-x-1 transition-transform">→</span></span>
               </span>
             </a>
@@ -100,19 +100,19 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="flex flex-wrap justify-center gap-6 md:gap-12 text-sm text-slate-400 font-medium"
+            className="flex flex-wrap justify-center gap-6 md:gap-12 text-sm text-secondary-400 font-medium"
           >
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <CheckCircle2 className="w-4 h-4 text-primary-400" />
               Limited to 40 Suppliers
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <CheckCircle2 className="w-4 h-4 text-primary-400" />
               Verified Buyers Only
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              Organized by Travizly
+              <CheckCircle2 className="w-4 h-4 text-primary-400" />
+              Organized by 9X EVENTS
             </div>
           </motion.div>
         </motion.div>

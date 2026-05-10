@@ -19,12 +19,12 @@ const Sponsorship = () => {
       glowColor: 'rgba(234,179,8,0.3)',
       borderColor: 'border-yellow-500/40',
       accentFrom: 'from-yellow-500',
-      accentTo: 'to-amber-400',
+      accentTo: 'to-accent-400',
       iconBg: 'bg-yellow-500/10',
       popular: true
     },
     {
-      icon: <Medal className="w-10 h-10 text-slate-300" />,
+      icon: <Medal className="w-10 h-10 text-secondary-300" />,
       title: 'City Partner',
       emoji: '🥈',
       tag: 'City Visibility',
@@ -35,14 +35,14 @@ const Sponsorship = () => {
         'Premium table location + dedicated branding'
       ],
       glowColor: 'rgba(148,163,184,0.2)',
-      borderColor: 'border-slate-400/30',
-      accentFrom: 'from-slate-400',
-      accentTo: 'to-slate-300',
-      iconBg: 'bg-slate-400/10',
+      borderColor: 'border-secondary-400/30',
+      accentFrom: 'from-secondary-400',
+      accentTo: 'to-secondary-300',
+      iconBg: 'bg-secondary-400/10',
       popular: false
     },
     {
-      icon: <Award className="w-10 h-10 text-amber-600" />,
+      icon: <Award className="w-10 h-10 text-accent-600" />,
       title: 'Official Partner',
       emoji: '🥉',
       tag: 'Category Exclusive',
@@ -53,16 +53,16 @@ const Sponsorship = () => {
         'Category exclusivity'
       ],
       glowColor: 'rgba(180,83,9,0.2)',
-      borderColor: 'border-amber-700/30',
-      accentFrom: 'from-amber-700',
-      accentTo: 'to-amber-500',
-      iconBg: 'bg-amber-700/10',
+      borderColor: 'border-accent-700/30',
+      accentFrom: 'from-accent-700',
+      accentTo: 'to-accent-500',
+      iconBg: 'bg-accent-700/10',
       popular: false
     }
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-slate-900">
+    <section className="py-24 relative overflow-hidden bg-secondary-900">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <motion.img 
@@ -74,12 +74,12 @@ const Sponsorship = () => {
           alt="Sponsorship Background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/80 to-slate-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary-900/90 via-secondary-900/80 to-secondary-900"></div>
       </div>
 
       {/* Animated orbs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -99,7 +99,7 @@ const Sponsorship = () => {
             className="text-4xl md:text-5xl font-display font-bold text-white mb-6"
           >
             Become an ISUC-2026 Partner. <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-orange-500">
               Own the India Market.
             </span>
           </motion.h2>
@@ -123,7 +123,7 @@ const Sponsorship = () => {
             >
               {/* Popular badge */}
               {tier.popular && (
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400"></div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-accent-400 to-orange-400"></div>
               )}
 
               {/* Glow Orb */}
@@ -136,7 +136,7 @@ const Sponsorship = () => {
                   </span>
                 )}
                 {!tier.popular && (
-                  <span className="inline-block mb-4 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-slate-400 text-xs font-semibold tracking-wider uppercase">
+                  <span className="inline-block mb-4 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-secondary-400 text-xs font-semibold tracking-wider uppercase">
                     {tier.tag}
                   </span>
                 )}
@@ -149,8 +149,8 @@ const Sponsorship = () => {
                   ISUC-2026 {tier.title}
                 </h3>
                 
-                <p className="text-sm font-medium text-slate-400 mb-6 pb-6 border-b border-white/10">
-                  Best for: <span className="text-slate-200 font-semibold">{tier.bestFor}</span>
+                <p className="text-sm font-medium text-secondary-400 mb-6 pb-6 border-b border-white/10">
+                  Best for: <span className="text-secondary-200 font-semibold">{tier.bestFor}</span>
                 </p>
                 
                 <ul className="space-y-4 mb-8">
@@ -163,9 +163,9 @@ const Sponsorship = () => {
                       className="flex items-start gap-3"
                     >
                       <div className={`w-5 h-5 rounded-full bg-gradient-to-br ${tier.accentFrom} ${tier.accentTo} flex items-center justify-center shrink-0 mt-0.5 shadow-md`}>
-                        <Check className="w-3 h-3 text-slate-900" />
+                        <Check className="w-3 h-3 text-secondary-900" />
                       </div>
-                      <span className="text-slate-300 text-sm leading-relaxed">{feature}</span>
+                      <span className="text-secondary-300 text-sm leading-relaxed">{feature}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -182,7 +182,7 @@ const Sponsorship = () => {
         >
           <a 
             href="#sponsor-deck" 
-            className="inline-flex items-center gap-3 px-10 py-5 text-lg font-bold bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-900 rounded-2xl shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:shadow-[0_0_50px_rgba(245,158,11,0.6)] transition-all duration-300 hover:-translate-y-1"
+            className="inline-flex items-center gap-3 px-10 py-5 text-lg font-bold bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-400 hover:to-orange-400 text-secondary-900 rounded-2xl shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:shadow-[0_0_50px_rgba(245,158,11,0.6)] transition-all duration-300 hover:-translate-y-1"
           >
             <Sparkles className="w-5 h-5" />
             Request Sponsor Deck & Pricing 

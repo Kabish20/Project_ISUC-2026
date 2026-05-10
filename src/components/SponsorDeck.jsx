@@ -39,7 +39,7 @@ const SponsorDeck = () => {
       title: 'City Partner',
       tag: 'City-Specific Dominance',
       bestFor: 'Regional Hotels & Fleet Aggregators',
-      color: 'from-slate-200 to-slate-400',
+      color: 'from-secondary-200 to-secondary-400',
       glow: 'rgba(200,200,200,0.2)',
       border: 'border-white/20',
       badge: 'bg-white/10 text-white border-white/20',
@@ -136,7 +136,7 @@ const SponsorDeck = () => {
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.45 }}
-            className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-lg md:text-xl text-secondary-300 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
           >
             Don't just exhibit—lead. <br />
             Partner with ISUC 2026 and become the primary name associated with the <span className="text-yellow-400 font-bold">future of Indo-Saudi Umrah business.</span>
@@ -149,7 +149,7 @@ const SponsorDeck = () => {
             className="flex flex-col sm:flex-row gap-5 justify-center"
           >
             <a 
-              href="mailto:info@travizly.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
+              href="mailto:info@9X EVENTS.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
               className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-primary-600 hover:bg-primary-500 text-white rounded-xl shadow-[0_0_40px_rgba(182,141,64,0.4)] transition-all duration-300 hover:-translate-y-1"
             >
               <Download className="w-5 h-5 fill-current" />
@@ -183,7 +183,7 @@ const SponsorDeck = () => {
                   <div className="text-yellow-400">{prop.icon}</div>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-2">{prop.title}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">{prop.desc}</p>
+                <p className="text-secondary-500 text-sm leading-relaxed">{prop.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -197,7 +197,7 @@ const SponsorDeck = () => {
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">
               A Tier for Every <br /> <span className="text-yellow-400">Ambition Level.</span>
             </h2>
-            <p className="text-slate-400 text-lg">
+            <p className="text-secondary-400 text-lg">
               Whether you want national dominance or city-specific impact, our partnership tiers are designed to provide maximum ROI.
             </p>
           </div>
@@ -210,7 +210,7 @@ const SponsorDeck = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className={`relative p-1 rounded-[40px] ${tier.popular ? 'bg-gradient-to-b from-yellow-400 to-amber-600' : 'bg-white/10'}`}
+                className={`relative p-1 rounded-[40px] ${tier.popular ? 'bg-gradient-to-b from-yellow-400 to-accent-600' : 'bg-white/10'}`}
               >
                 <div className="bg-secondary-900 rounded-[38px] h-full p-10 flex flex-col relative overflow-hidden group">
                   {tier.popular && (
@@ -229,7 +229,7 @@ const SponsorDeck = () => {
                     <p className="text-yellow-400 text-sm font-bold tracking-widest uppercase">{tier.tag}</p>
                   </div>
 
-                  <p className="text-slate-400 text-sm mb-10 font-medium">Best for: <span className="text-slate-200">{tier.bestFor}</span></p>
+                  <p className="text-secondary-400 text-sm mb-10 font-medium">Best for: <span className="text-secondary-200">{tier.bestFor}</span></p>
 
                   <div className="space-y-4 mb-12 flex-grow">
                     {tier.features.map((f, fi) => (
@@ -237,7 +237,7 @@ const SponsorDeck = () => {
                         <div className="mt-1.5 flex-shrink-0 w-4 h-4 rounded-full bg-yellow-500/20 flex items-center justify-center">
                           <Check className="w-2.5 h-2.5 text-yellow-400" />
                         </div>
-                        <span className="text-slate-300 text-sm leading-relaxed">{f}</span>
+                        <span className="text-secondary-300 text-sm leading-relaxed">{f}</span>
                       </div>
                     ))}
                   </div>
@@ -253,7 +253,7 @@ const SponsorDeck = () => {
       </div>
 
       {/* ── Audience Insight Section ── */}
-      <div className="py-32 bg-slate-900 border-y border-white/5 overflow-hidden">
+      <div className="py-32 bg-secondary-900 border-y border-white/5 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <motion.div 
@@ -266,7 +266,7 @@ const SponsorDeck = () => {
                 Brand Visibility <br />
                 <span className="text-yellow-400">Beyond the Table.</span>
               </h2>
-              <p className="text-lg text-slate-400 mb-10 leading-relaxed">
+              <p className="text-lg text-secondary-400 mb-10 leading-relaxed">
                 As a sponsor, your brand isn’t just seen in the meeting room. It’s part of a 4-month multi-channel marketing campaign targeting India's entire Umrah ecosystem.
               </p>
               
@@ -282,7 +282,7 @@ const SponsorDeck = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-white mb-1">{item.title}</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-secondary-500 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -300,21 +300,21 @@ const SponsorDeck = () => {
                 <div className="space-y-4">
                   <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl">
                     <div className="text-4xl font-display font-bold text-yellow-400 mb-2">300+</div>
-                    <div className="text-xs text-slate-500 uppercase font-black tracking-widest">Targeted Buyers</div>
+                    <div className="text-xs text-secondary-500 uppercase font-black tracking-widest">Targeted Buyers</div>
                   </div>
                   <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl translate-x-8">
                     <div className="text-4xl font-display font-bold text-white mb-2">4</div>
-                    <div className="text-xs text-slate-500 uppercase font-black tracking-widest">Major Hub Cities</div>
+                    <div className="text-xs text-secondary-500 uppercase font-black tracking-widest">Major Hub Cities</div>
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl">
-                    <div className="text-4xl font-display font-bold text-blue-400 mb-2">7</div>
-                    <div className="text-xs text-slate-500 uppercase font-black tracking-widest">Days Exposure</div>
+                    <div className="text-4xl font-display font-bold text-primary-400 mb-2">7</div>
+                    <div className="text-xs text-secondary-500 uppercase font-black tracking-widest">Days Exposure</div>
                   </div>
                   <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl -translate-x-4">
-                    <div className="text-4xl font-display font-bold text-emerald-400 mb-2">100%</div>
-                    <div className="text-xs text-slate-500 uppercase font-black tracking-widest">B2B Verified</div>
+                    <div className="text-4xl font-display font-bold text-primary-400 mb-2">100%</div>
+                    <div className="text-xs text-secondary-500 uppercase font-black tracking-widest">B2B Verified</div>
                   </div>
                 </div>
               </div>
@@ -330,20 +330,20 @@ const SponsorDeck = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="rounded-[40px] bg-gradient-to-br from-yellow-500 via-amber-600 to-amber-800 p-10 md:p-16 text-center relative overflow-hidden group"
+            className="rounded-[40px] bg-gradient-to-br from-yellow-500 via-accent-600 to-accent-800 p-10 md:p-16 text-center relative overflow-hidden group"
           >
             <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-display font-bold text-secondary-900 mb-8 leading-tight">
                 Claim Your <br /> Marketplace Status.
               </h2>
-              <p className="text-xl text-slate-900 font-bold mb-12 max-w-2xl mx-auto">
+              <p className="text-xl text-secondary-900 font-bold mb-12 max-w-2xl mx-auto">
                 Title partnership for ISUC 2026 is exclusive to one brand. Category partner slots are strictly first-come, first-served. Secure your interest now.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a 
-                  href="mailto:info@travizly.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
+                  href="mailto:info@9X EVENTS.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
                   className="px-12 py-6 bg-secondary-900 text-white font-bold text-xl rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl"
                 >
                   Download Partnership Deck
@@ -356,11 +356,11 @@ const SponsorDeck = () => {
                 </a>
               </div>
               
-              <div className="mt-12 flex items-center justify-center gap-8 text-slate-900/60 font-black uppercase text-[10px] tracking-[0.2em]">
+              <div className="mt-12 flex items-center justify-center gap-8 text-secondary-900/60 font-black uppercase text-[10px] tracking-[0.2em]">
                 <span>Limited Inventory</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-slate-900/20" />
+                <span className="w-1.5 h-1.5 rounded-full bg-secondary-900/20" />
                 <span>B2B Only</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-slate-900/20" />
+                <span className="w-1.5 h-1.5 rounded-full bg-secondary-900/20" />
                 <span>Global Reach</span>
               </div>
             </div>

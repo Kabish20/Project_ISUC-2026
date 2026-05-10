@@ -32,9 +32,9 @@ const OrganizedBy = () => {
       icon: <BarChart3 className="w-6 h-6" />,
       title: 'Ensure Outcomes',
       desc: 'We measure meetings, MoUs signed, and delegate satisfaction.',
-      color: 'text-emerald-400',
-      bg: 'bg-emerald-500/10',
-      border: 'border-emerald-500/20'
+      color: 'text-primary-400',
+      bg: 'bg-primary-500/10',
+      border: 'border-primary-500/20'
     }
   ];
 
@@ -72,7 +72,7 @@ const OrganizedBy = () => {
               >
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-500/20 border border-primary-400/30 text-primary-300 text-sm font-semibold mb-6">
                   <Sparkles className="w-4 h-4" />
-                  Organized by Travizly
+                  Organized by 9X EVENTS
                 </div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight">
                   We Are Market Connectors,{' '}
@@ -81,7 +81,7 @@ const OrganizedBy = () => {
                   </span>
                 </h2>
                 <p className="text-secondary-100/80 text-lg mb-8 leading-relaxed">
-                  Travizly is a trade facilitation company specializing in Saudi-India travel corridors. We understand the nuances of both markets deeply.
+                  9X EVENTS is a trade facilitation company specializing in Saudi-India travel corridors. We understand the nuances of both markets deeply.
                 </p>
 
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 relative overflow-hidden group">
@@ -98,7 +98,7 @@ const OrganizedBy = () => {
             </div>
 
             {/* Right Content */}
-            <div className="p-10 md:p-16 bg-slate-900/80 backdrop-blur-xl flex flex-col justify-center border-l border-white/5">
+            <div className="p-10 md:p-16 bg-secondary-900/80 backdrop-blur-xl flex flex-col justify-center border-l border-white/5">
               <motion.h3
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}

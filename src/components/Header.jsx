@@ -32,29 +32,29 @@ const Header = () => {
             initial={{ y: 0 }}
             exit={{ y: -40 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 right-0 h-10 bg-slate-900 border-b border-white/5 z-[60] hidden md:flex items-center"
+            className="fixed top-0 left-0 right-0 h-10 bg-secondary-900 border-b border-white/5 z-[60] hidden md:flex items-center"
           >
             <div className="container mx-auto px-4 flex justify-between items-center">
               <div className="flex gap-6">
-                <a href="mailto:info@travizly.com" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors text-xs font-medium">
+                <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors text-xs font-medium">
                   <Mail className="w-3.5 h-3.5 text-primary-400" />
-                  info@travizly.com
+                  info@9X EVENTS.com
                 </a>
                 <div className="flex gap-4 border-l border-white/10 pl-4">
                   <a href="tel:+918072896589" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors text-xs font-medium">
                     <Phone className="w-3.5 h-3.5 text-primary-500" />
                     IN: +91 80728 96589
                   </a>
-                  <a href="tel:+966558891231" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-xs font-medium">
-                    <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                  <a href="tel:+966558891231" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors text-xs font-medium">
+                    <Phone className="w-3.5 h-3.5 text-primary-400" />
                     KSA: +966 55 889 1231
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.1em] text-slate-500">
+              <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.1em] text-secondary-500">
                 <span className="flex items-center gap-1.5"><ShieldCheck className="w-3 h-3" /> Verified B2B Only</span>
-                <span className="w-1 h-1 rounded-full bg-slate-700" />
-                <span className="flex items-center gap-1.5"><Globe className="w-3 h-3" /> 4-City India Tour</span>
+                <span className="w-1 h-1 rounded-full bg-secondary-700" />
+                <span className="flex items-center gap-1.5"><Globe className="w-3 h-3" /> 3-City India Tour</span>
               </div>
             </div>
           </motion.div>
@@ -72,7 +72,7 @@ const Header = () => {
               <img 
                 src={logo} 
                 alt="Indo Saudi Umrah Connect 2026" 
-                className={`${isScrolled ? 'h-14' : 'h-20'} w-auto object-contain transition-all duration-500 group-hover:scale-105`}
+                className={`${isScrolled ? 'h-16' : 'h-24'} w-auto object-contain transition-all duration-500 group-hover:scale-105`}
               />
             </button>
 
@@ -89,9 +89,9 @@ const Header = () => {
                     exit={{ opacity: 0, x: 20 }}
                     className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur-md"
                   >
-                    <a href="mailto:info@travizly.com" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors group">
+                    <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors group">
                       <Mail className="w-3.5 h-3.5 text-primary-400" />
-                      <span className="text-xs font-medium tracking-tight">info@travizly.com</span>
+                      <span className="text-xs font-medium tracking-tight">info@9X EVENTS.com</span>
                     </a>
                     <div className="w-px h-3 bg-white/10" />
                     <a href="tel:+918072896589" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors group">
@@ -145,8 +145,8 @@ const Header = () => {
               <div className="p-6 space-y-6">
 
                 <div className="pt-6 border-t border-white/10 space-y-4">
-                  <a href="mailto:info@travizly.com" className="flex items-center gap-3 text-secondary-300">
-                    <Mail className="w-5 h-5 text-primary-400" /> info@travizly.com
+                  <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-3 text-secondary-300">
+                    <Mail className="w-5 h-5 text-primary-400" /> info@9X EVENTS.com
                   </a>
                   <a href="tel:+918072896589" className="flex items-center gap-3 text-secondary-300">
                     <Phone className="w-5 h-5 text-primary-500" /> IN: +91 80728 96589

@@ -52,16 +52,16 @@ const ExhibitPage = () => {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [1, 1, 0]);
 
   const tableFeatures = [
-    { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: 'Branded Table in All 4 Cities', desc: 'Your dedicated premium exhibition space across Delhi, Mumbai, Hyderabad & Chennai — fully set up and managed.' },
+    { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: 'Branded Table in All 3 Cities', desc: 'Your dedicated premium exhibition space across Delhi, Mumbai & Chennai — fully set up and managed.' },
     { icon: <Users className="w-6 h-6 text-accent-400" />, title: '60–80 Pre-Matched Buyer Meetings', desc: 'Guaranteed face-to-face sessions with verified Indian operators matched to your hotel category, group size & regions.' },
-    { icon: <Shield className="w-6 h-6 text-emerald-400" />, title: 'Zero Cold Outreach Needed', desc: 'We screen, qualify and schedule all buyer meetings. You arrive ready to close deals.' },
+    { icon: <Shield className="w-6 h-6 text-primary-400" />, title: 'Zero Cold Outreach Needed', desc: 'We screen, qualify and schedule all buyer meetings. You arrive ready to close deals.' },
     { icon: <Globe className="w-6 h-6 text-primary-400" />, title: 'Access to 1.8M+ Pilgrim Market', desc: "India's Umrah market sent 1.8M pilgrims in 2025. 70% of volume controlled by the buyers you'll meet here." },
     { icon: <Handshake className="w-6 h-6 text-accent-400" />, title: 'Networking Dinners Each Evening', desc: 'Exclusive gala dinners where real partnerships and MoUs are signed in a relaxed luxury setting.' },
-    { icon: <TrendingUp className="w-6 h-6 text-primary-400" />, title: 'Full 7-Day Tour Managed', desc: 'From airport to airport — 4-star hotels, domestic flights, half-board meals, transfers. You just focus on business.' },
+    { icon: <TrendingUp className="w-6 h-6 text-primary-400" />, title: 'Full 6-Day Tour Managed', desc: 'From airport to airport — 4-star hotels, domestic flights, half-board meals, transfers. You just focus on business.' },
   ];
 
   const tourInclusions = [
-    { icon: <Hotel className="w-5 h-5" />, label: '4-Star Hotels', desc: 'Premium stay in all 4 cities' },
+    { icon: <Hotel className="w-5 h-5" />, label: 'Premium Hotels', desc: 'Luxury stay in all 3 cities' },
     { icon: <Plane className="w-5 h-5" />, label: 'Domestic Flights', desc: 'Convenient inter-city flights' },
     { icon: <Utensils className="w-5 h-5" />, label: 'Half Board Meals', desc: 'Breakfast, Lunch + 2 Coffee Breaks' },
     { icon: <Car className="w-5 h-5" />, label: 'Airport Transfers', desc: 'All Domestic Pick-up & Drop Off' },
@@ -88,7 +88,7 @@ const ExhibitPage = () => {
           {[...Array(3)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute rounded-full blur-[120px] bg-blue-600/10"
+              className="absolute rounded-full blur-[120px] bg-primary-600/10"
               style={{
                 width: 400 + i * 200,
                 height: 400 + i * 200,
@@ -173,20 +173,20 @@ const ExhibitPage = () => {
             <motion.div 
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-1.5 rounded-full bg-blue-400"
+              className="w-1.5 h-1.5 rounded-full bg-primary-400"
             />
           </div>
         </motion.div>
       </div>
 
       {/* ── Stats Highlight ── */}
-      <div className="relative py-24 bg-slate-900 border-y border-white/5">
+      <div className="relative py-24 bg-secondary-900 border-y border-white/5">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { stat: 40, suffix: '', label: 'Exhibitor Tables', sub: 'Fixed Cap' },
               { stat: 300, suffix: '+', label: 'Verified Buyers', sub: 'IATA Accredited' },
-              { stat: 4, suffix: '', label: 'Indian Cities', sub: 'Tier-1 Markets' },
+              { stat: 3, suffix: '', label: 'Indian Cities', sub: 'Tier-1 Markets' },
               { stat: 80, suffix: '', label: 'Avg Meetings', sub: 'Per Exhibitor' },
             ].map((item, i) => (
               <motion.div 
@@ -222,25 +222,25 @@ const ExhibitPage = () => {
             >
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 leading-tight">
                 Not a Stall. <br />
-                <span className="text-blue-400">A Structured Bridge.</span>
+                <span className="text-primary-400">A Structured Bridge.</span>
               </h2>
-              <p className="text-lg text-slate-400 mb-10 leading-relaxed">
+              <p className="text-lg text-secondary-400 mb-10 leading-relaxed">
                 Standard exhibitions rely on luck. ISUC 2026 relies on data. We match your hotel, DMC, or transport inventory with buyers specifically looking for your category.
               </p>
               
               <div className="space-y-6">
                 {[
                   { title: "20-Minute Focused Slots", desc: "Every meeting is timed and pre-matched. No time wasted on 'just looking' visitors." },
-                  { title: "Branded Premium Table", desc: "Fully set up across 4 luxury hotels in Delhi, Mumbai, Hyderabad, and Chennai." },
+                  { title: "Branded Premium Table", desc: "Fully set up across luxury hotels in Delhi, Mumbai, and Chennai." },
                   { title: "Direct MoU Signing", desc: "Exclusive gala dinners designed for concluding business and signing partnerships." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 group">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600/10 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                      <CheckCircle2 className="w-5 h-5 text-blue-400 group-hover:text-white" />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-600/10 border border-primary-500/20 flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
+                      <CheckCircle2 className="w-5 h-5 text-primary-400 group-hover:text-white" />
                     </div>
                     <div>
                       <h4 className="font-bold text-white mb-1">{item.title}</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-secondary-500 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -253,20 +253,20 @@ const ExhibitPage = () => {
               viewport={{ once: true }}
               className="lg:w-1/2 relative group"
             >
-              <div className="absolute -inset-4 bg-blue-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl" />
+              <div className="absolute -inset-4 bg-primary-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl" />
               <img 
                 src="/assets/nano_b2b_meetings.png" 
                 alt="B2B Meetings" 
                 className="relative z-10 rounded-3xl shadow-2xl border border-white/10 w-full object-cover aspect-video"
               />
-              <div className="absolute -bottom-6 -right-6 z-20 bg-slate-900 border border-white/10 p-6 rounded-2xl shadow-2xl hidden md:block">
+              <div className="absolute -bottom-6 -right-6 z-20 bg-secondary-900 border border-white/10 p-6 rounded-2xl shadow-2xl hidden md:block">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-emerald-400" />
+                  <div className="w-12 h-12 rounded-full bg-primary-500/20 flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-primary-400" />
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-white tracking-tight">60–80</div>
-                    <div className="text-xs text-slate-400 uppercase font-bold tracking-wider">Meetings Guaranteed</div>
+                    <div className="text-xs text-secondary-400 uppercase font-bold tracking-wider">Meetings Guaranteed</div>
                   </div>
                 </div>
               </div>
@@ -298,21 +298,21 @@ const ExhibitPage = () => {
                 viewport={{ once: true }}
                 className="max-w-3xl"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-400 text-xs font-bold mb-8 tracking-widest uppercase">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-500/20 border border-accent-400/40 text-accent-400 text-xs font-bold mb-8 tracking-widest uppercase">
                   Relationship Building
                 </div>
                 <h3 className="text-4xl md:text-6xl font-display font-bold mb-8">
                   Where Handshakes <br />
-                  <span className="text-amber-400">Become Contracts.</span>
+                  <span className="text-accent-400">Become Contracts.</span>
                 </h3>
-                <p className="text-lg text-slate-300 mb-12 leading-relaxed">
+                <p className="text-lg text-secondary-300 mb-12 leading-relaxed">
                   Every evening concludes with a luxury networking gala dinner. A curated environment where Saudi exhibitors and Indian buyers socialize in an informal yet high-end setting to solidify the day's business talks.
                 </p>
                 <div className="flex flex-wrap justify-center gap-8">
                   {[
-                    { label: "Exclusive Venue", icon: <Star className="w-5 h-5 text-amber-400" /> },
-                    { label: "Top 300 Buyers", icon: <Users className="w-5 h-5 text-amber-400" /> },
-                    { label: "Unmatched Vibe", icon: <Award className="w-5 h-5 text-amber-400" /> }
+                    { label: "Exclusive Venue", icon: <Star className="w-5 h-5 text-accent-400" /> },
+                    { label: "Top 300 Buyers", icon: <Users className="w-5 h-5 text-accent-400" /> },
+                    { label: "Unmatched Vibe", icon: <Award className="w-5 h-5 text-accent-400" /> }
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-white font-bold">
                       {item.icon}
@@ -327,14 +327,14 @@ const ExhibitPage = () => {
       </div>
 
       {/* ── Fully Managed Tour Grid ── */}
-      <div className="py-32 bg-slate-900 border-y border-white/5 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[100px]" />
+      <div className="py-32 bg-secondary-900 border-y border-white/5 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-[100px]" />
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">
-              A 7-Day <span className="text-blue-400">Seamless Tour.</span>
+              A 6-Day <span className="text-primary-400">Seamless Tour.</span>
             </h2>
-            <p className="text-slate-400 text-lg">
+            <p className="text-secondary-400 text-lg">
               One package, zero logistics. From the moment you land in Delhi until you fly out from Chennai, we handle every detail of your stay, travel, and meetings.
             </p>
           </div>
@@ -347,13 +347,13 @@ const ExhibitPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-3xl bg-secondary-900 border border-white/5 hover:border-blue-500/30 transition-all duration-300 text-center group"
+                className="p-8 rounded-3xl bg-secondary-900 border border-white/5 hover:border-primary-500/30 transition-all duration-300 text-center group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-blue-600/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <div className="text-blue-400">{item.icon}</div>
+                <div className="w-16 h-16 rounded-2xl bg-primary-600/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-primary-400">{item.icon}</div>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-2">{item.label}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-secondary-500 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -368,7 +368,7 @@ const ExhibitPage = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-slate-900/50 p-10 md:p-16 rounded-[40px] border border-white/10"
+              className="bg-secondary-900/50 p-10 md:p-16 rounded-[40px] border border-white/10"
             >
               <h3 className="text-3xl font-display font-bold mb-10">Eligibility Checklist</h3>
               <div className="space-y-6">
@@ -386,10 +386,10 @@ const ExhibitPage = () => {
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
-                    className="flex items-start gap-4 text-slate-300"
+                    className="flex items-start gap-4 text-secondary-300"
                   >
-                    <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-primary-400" />
                     </div>
                     <span className="font-medium">{item}</span>
                   </motion.div>
@@ -404,7 +404,7 @@ const ExhibitPage = () => {
               className="flex flex-col justify-center"
             >
               <h3 className="text-3xl font-display font-bold mb-6">Simple Application Path</h3>
-              <p className="text-slate-400 mb-10 leading-relaxed">
+              <p className="text-secondary-400 mb-10 leading-relaxed">
                 We maintain a strict quality balance. Applications are reviewed within 48 hours to ensure a balanced mix of products for our Indian buyers.
               </p>
               
@@ -417,12 +417,12 @@ const ExhibitPage = () => {
                   { step: "04", title: "Show Up & Close", desc: "We handle the rest. Land in India and start meeting." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-8 relative z-10 group">
-                    <div className="w-14 h-14 rounded-2xl bg-slate-900 border border-white/10 flex items-center justify-center font-display font-bold text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    <div className="w-14 h-14 rounded-2xl bg-secondary-900 border border-white/10 flex items-center justify-center font-display font-bold text-primary-400 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
                       {item.step}
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white mb-1">{item.title}</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-secondary-500 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -450,26 +450,26 @@ const ExhibitPage = () => {
                 Ready to Meet <br />
                 Your Next 300 Partners?
               </h2>
-              <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto font-medium">
+              <p className="text-xl text-primary-100 mb-12 max-w-2xl mx-auto font-medium">
                 Applications for ISUC 2026 are now open. Only 40 table slots are available for Saudi suppliers. Secure yours today.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
                 <a
                   href="https://zoho.com/exhibit"
-                  className="px-10 py-5 bg-white text-blue-700 font-bold text-lg rounded-2xl hover:bg-blue-50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                  className="px-10 py-5 bg-white text-primary-700 font-bold text-lg rounded-2xl hover:bg-primary-50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 >
                   Start My Application
                 </a>
                 <a
-                  href="mailto:info@travizly.com"
-                  className="px-10 py-5 bg-blue-700/30 text-white font-bold text-lg rounded-2xl border border-white/30 backdrop-blur-md hover:bg-blue-700/50 transition-all duration-300"
+                  href="mailto:info@9X EVENTS.com"
+                  className="px-10 py-5 bg-primary-700/30 text-white font-bold text-lg rounded-2xl border border-white/30 backdrop-blur-md hover:bg-primary-700/50 transition-all duration-300"
                 >
                   Contact Organizer
                 </a>
               </div>
 
-              <div className="flex items-center justify-center gap-6 text-blue-100/70 text-sm font-bold tracking-widest uppercase">
+              <div className="flex items-center justify-center gap-6 text-primary-100/70 text-sm font-bold tracking-widest uppercase">
                 <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> 48h Response</span>
                 <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4" /> B2B Verified</span>
               </div>

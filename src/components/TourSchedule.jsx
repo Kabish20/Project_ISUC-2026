@@ -4,10 +4,12 @@ import { MapPin, Plane, Utensils, Hotel, Car, Info } from 'lucide-react';
 
 const TourSchedule = () => {
   const schedule = [
-    { date: '3-5 July', city: 'Delhi', desc: 'North India Market Entry', image: '/assets/nano_delhi_banner.png' },
-    { date: '5-7 July', city: 'Mumbai', desc: 'West India Core Hub', image: '/assets/nano_mumbai_banner.png' },
-    { date: '7-8 July', city: 'Hyderabad', desc: 'South Central Dominance', note: '10 AM – 3 PM (Adjusted for transfer)', image: '/assets/nano_hyd_banner.png' },
-    { date: '8-9 July', city: 'Chennai', desc: 'Deep South Gateway', image: '/assets/nano_chennai_banner.png' }
+    { date: '03 July 2026', city: 'Delhi', desc: 'Arrival, Hotel Check-In, Networking Dinner', image: '/assets/nano_delhi_banner.png' },
+    { date: '04 July 2026', city: 'Delhi Event', desc: 'B2B Meetings, Morning & Evening Tea Sessions, Networking Dinner', image: '/assets/nano_delhi_banner.png' },
+    { date: '05 July 2026', city: 'Delhi → Mumbai', desc: 'Domestic Flight, Hotel Check-In, Networking Dinner', image: '/assets/nano_mumbai_banner.png' },
+    { date: '06 July 2026', city: 'Mumbai Event', desc: 'B2B Meetings, Evening Flight to Chennai, Hotel Check-In', image: '/assets/nano_mumbai_banner.png' },
+    { date: '07 July 2026', city: 'Chennai Event', desc: 'B2B Meetings, Networking Dinner', image: '/assets/nano_chennai_banner.png' },
+    { date: '08 July 2026', city: 'Departure', desc: 'Breakfast, Departure', image: '/assets/nano_chennai_banner.png' }
   ];
 
   const inclusions = [
@@ -28,14 +30,14 @@ const TourSchedule = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-display font-bold text-white mb-6"
           >
-            7 Days. 4 Markets. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-amber-400">Fully Managed.</span>
+            6 Days. 3 Markets. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">Fully Managed.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-slate-400"
+            className="text-lg text-secondary-400"
           >
             ISUC-2026 Tour Schedule
           </motion.p>
@@ -45,7 +47,7 @@ const TourSchedule = () => {
         <div className="max-w-5xl mx-auto mb-20 relative">
           <div className="hidden lg:block absolute top-1/2 left-8 right-8 h-1 bg-white/5 -translate-y-1/2 rounded-full"></div>
           
-          <div className="grid lg:grid-cols-4 gap-6 relative z-10">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 relative z-10">
             {schedule.map((item, index) => (
               <motion.div 
                 key={index}
@@ -69,10 +71,10 @@ const TourSchedule = () => {
                   <div className="lg:text-center">
                     <p className="text-primary-400 font-bold text-sm mb-2">{item.date}</p>
                     <h3 className="text-2xl font-display font-bold text-white mb-2">{item.city}</h3>
-                    <p className="text-slate-400 text-sm font-medium">{item.desc}</p>
+                    <p className="text-secondary-400 text-sm font-medium">{item.desc}</p>
                     
                     {item.note && (
-                      <div className="mt-4 flex items-start gap-2 bg-amber-50/80 backdrop-blur-sm border border-amber-100 p-3 rounded-xl text-amber-800 text-xs font-semibold lg:justify-center text-left shadow-sm">
+                      <div className="mt-4 flex items-start gap-2 bg-accent-50/80 backdrop-blur-sm border border-accent-100 p-3 rounded-xl text-accent-800 text-xs font-semibold lg:justify-center text-left shadow-sm">
                         <Info className="w-4 h-4 shrink-0 mt-0.5" />
                         <span>{item.note}</span>
                       </div>
@@ -94,7 +96,7 @@ const TourSchedule = () => {
         >
           <div className="absolute inset-0 z-0">
              <img src="/assets/tour_banner.png" alt="Tour Route Map" className="w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700" />
-             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+             <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/60 to-transparent"></div>
           </div>
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary-600 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
           
@@ -111,7 +113,7 @@ const TourSchedule = () => {
             ))}
           </div>
           
-          <p className="text-center text-slate-400 max-w-2xl mx-auto">
+          <p className="text-center text-secondary-400 max-w-2xl mx-auto">
             Plus dedicated on-ground support throughout the tour. You just focus on the meetings, we handle the logistics.
           </p>
           </div>
