@@ -21,7 +21,7 @@
 
 @layer components {
   .btn-primary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl hover:from-primary-500 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 shadow-lg shadow-primary-500/30 overflow-hidden;
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-secondary-900 transition-all duration-300 bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl hover:from-primary-500 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 shadow-lg shadow-primary-500/30 overflow-hidden;
   }
   
   .btn-primary::after {
@@ -29,7 +29,7 @@
   }
 
   .btn-secondary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-secondary-800 border border-secondary-700 rounded-xl hover:bg-secondary-700 hover:border-secondary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500 shadow-sm overflow-hidden;
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-secondary-50 transition-all duration-300 bg-secondary-800 border border-secondary-700 rounded-xl hover:bg-secondary-700 hover:border-secondary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500 shadow-sm overflow-hidden;
   }
   
   .btn-secondary::after {

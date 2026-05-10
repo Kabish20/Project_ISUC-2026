@@ -33,12 +33,12 @@ const Hero = () => {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight tracking-tight">
             INDO-SAUDI UMRAH <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-200 to-primary-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
               CONNECT 2026
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-primary-100 mb-6 font-medium max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-primary-50 mb-6 font-medium max-w-3xl mx-auto">
             The Only Structured B2B Gateway to India's 1.8M+ Umrah Market
           </p>
 
@@ -55,14 +55,14 @@ const Hero = () => {
           >
             <div className="flex items-center gap-3 text-white">
               <div className="w-10 h-10 rounded-full bg-primary-500/20 flex items-center justify-center">
-                <Globe className="w-5 h-5 text-primary-300" />
+                <Globe className="w-5 h-5 text-primary-400" />
               </div>
               <span className="text-lg font-semibold tracking-wide">3–8 July 2026</span>
             </div>
             <div className="hidden md:block w-px h-10 bg-white/20"></div>
             <div className="flex items-center gap-3 text-white">
               <div className="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-accent-300" />
+                <MapPin className="w-5 h-5 text-accent-500" />
               </div>
               <span className="text-lg font-semibold tracking-wide">Delhi • Mumbai • Chennai</span>
             </div>
@@ -83,13 +83,13 @@ const Hero = () => {
             </a>
             <a href="#register-buyer" className="btn-secondary flex-1 group">
               <span className="relative z-10 flex flex-col items-center">
-                <span className="text-sm font-normal text-secondary-500 mb-1 group-hover:text-secondary-700 transition-colors">I'm an Indian Agent</span>
-                <span className="flex items-center gap-2 text-primary-600">Register as Buyer <span className="group-hover:translate-x-1 transition-transform">→</span></span>
+                <span className="text-sm font-normal text-secondary-300 mb-1 group-hover:text-white transition-colors">I'm an Indian Agent</span>
+                <span className="flex items-center gap-2 text-white">Register as Buyer <span className="group-hover:translate-x-1 transition-transform">→</span></span>
               </span>
             </a>
             <a href="#sponsor-deck" className="btn-accent flex-1 group">
               <span className="relative z-10 flex flex-col items-center">
-                <span className="text-sm font-normal text-orange-100 mb-1 group-hover:text-white transition-colors">Become a Sponsor</span>
+                <span className="text-sm font-normal text-secondary-900 mb-1 transition-colors">Become a Sponsor</span>
                 <span className="flex items-center gap-2">Get Sponsor Deck <span className="group-hover:translate-x-1 transition-transform">→</span></span>
               </span>
             </a>

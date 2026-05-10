@@ -40,7 +40,7 @@ const Footer = () => {
                 className="h-28 w-auto object-contain transition-transform group-hover:scale-105"
               />
             </button>
-            <p className="text-secondary-400 mb-6 leading-relaxed text-sm">
+            <p className="text-secondary-400 mb-6 leading-relaxed text-sm font-medium">
               Indo-Saudi Umrah Connect<br />
               3–8 July 2026<br />
               Delhi • Mumbai • Chennai
@@ -50,13 +50,12 @@ const Footer = () => {
             <div className="space-y-2 mb-6">
               {ctaLinks.map((link) => (
                 <button key={link.id} onClick={() => scrollTo(link.id)}
-                  className={`block text-sm font-semibold transition-colors ${link.color}`}>
+                  className={`block text-sm font-bold transition-colors ${link.color}`}>
                   {link.label} →
                 </button>
               ))}
             </div>
 
-            {/* Social */}
             <div className="flex gap-3">
               <a href="#" aria-label="LinkedIn"
                 className="w-9 h-9 rounded-full bg-secondary-800 flex items-center justify-center text-secondary-400 hover:bg-primary-700 hover:text-white transition-all duration-200 hover:scale-110">
@@ -73,7 +72,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Column */}
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold mb-6 font-display text-lg">Contact Us</h4>
             <ul className="space-y-4">
@@ -126,7 +124,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Quick Links Column — connected to every section */}
           <div className="lg:col-span-1">
             <h4 className="text-white font-bold mb-6 font-display text-lg">Quick Links</h4>
             <ul className="space-y-3">

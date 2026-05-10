@@ -41,7 +41,7 @@ const FeatureCard = ({ icon, title, desc, delay }) => (
       {icon}
     </div>
     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-300 transition-colors">{title}</h3>
-    <p className="text-secondary-400 text-sm leading-relaxed">{desc}</p>
+    <p className="text-secondary-300 text-sm leading-relaxed">{desc}</p>
   </motion.div>
 );
 
@@ -122,10 +122,10 @@ const ExhibitPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl font-display font-bold mb-8 leading-[1.1] tracking-tight"
+            className="text-5xl md:text-6xl font-display font-bold text-white mb-8 leading-[1.1] tracking-tight"
           >
             The Direct Path to <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-300 to-primary-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600">
               India's Umrah Trade
             </span>
           </motion.h1>
@@ -133,10 +133,10 @@ const ExhibitPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45 }}
-            className="text-lg md:text-xl text-secondary-200 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-lg md:text-xl text-secondary-300 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
           >
             Skip the booths. Skip the random footfall. <br />
-            Secure one of <span className="text-primary-400">40 exclusive tables</span> and meet India's top 300 buyers in focused, pre-scheduled sessions.
+            Secure one of <span className="text-primary-400 font-bold">40 exclusive tables</span> and meet India's top 300 buyers in focused, pre-scheduled sessions.
           </motion.p>
 
           <motion.div
@@ -220,7 +220,7 @@ const ExhibitPage = () => {
               viewport={{ once: true }}
               className="lg:w-1/2"
             >
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-8 leading-tight">
                 Not a Stall. <br />
                 <span className="text-primary-400">A Structured Bridge.</span>
               </h2>
@@ -235,12 +235,12 @@ const ExhibitPage = () => {
                   { title: "Direct MoU Signing", desc: "Exclusive gala dinners designed for concluding business and signing partnerships." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 group">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-600/10 border border-primary-500/20 flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-900/20 border border-primary-500/20 flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
                       <CheckCircle2 className="w-5 h-5 text-primary-400 group-hover:text-white" />
                     </div>
                     <div>
                       <h4 className="font-bold text-white mb-1">{item.title}</h4>
-                      <p className="text-secondary-500 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-secondary-400 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -349,11 +349,11 @@ const ExhibitPage = () => {
                 transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-3xl bg-secondary-900 border border-white/5 hover:border-primary-500/30 transition-all duration-300 text-center group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-primary-600/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-primary-900/30 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <div className="text-primary-400">{item.icon}</div>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-2">{item.label}</h4>
-                <p className="text-secondary-500 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-secondary-400 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -370,7 +370,7 @@ const ExhibitPage = () => {
               viewport={{ once: true }}
               className="bg-secondary-900/50 p-10 md:p-16 rounded-[40px] border border-white/10"
             >
-              <h3 className="text-3xl font-display font-bold mb-10">Eligibility Checklist</h3>
+              <h3 className="text-3xl font-display font-bold text-white mb-10">Eligibility Checklist</h3>
               <div className="space-y-6">
                 {[
                   "KSA-based Umrah DMCs & Ground Handlers",
@@ -388,7 +388,7 @@ const ExhibitPage = () => {
                     transition={{ delay: i * 0.05 }}
                     className="flex items-start gap-4 text-secondary-300"
                   >
-                    <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center">
+                    <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary-900/30 flex items-center justify-center">
                       <CheckCircle2 className="w-3.5 h-3.5 text-primary-400" />
                     </div>
                     <span className="font-medium">{item}</span>
@@ -403,7 +403,7 @@ const ExhibitPage = () => {
               viewport={{ once: true }}
               className="flex flex-col justify-center"
             >
-              <h3 className="text-3xl font-display font-bold mb-6">Simple Application Path</h3>
+              <h3 className="text-3xl font-display font-bold text-white mb-6">Simple Application Path</h3>
               <p className="text-secondary-400 mb-10 leading-relaxed">
                 We maintain a strict quality balance. Applications are reviewed within 48 hours to ensure a balanced mix of products for our Indian buyers.
               </p>
@@ -417,12 +417,12 @@ const ExhibitPage = () => {
                   { step: "04", title: "Show Up & Close", desc: "We handle the rest. Land in India and start meeting." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-8 relative z-10 group">
-                    <div className="w-14 h-14 rounded-2xl bg-secondary-900 border border-white/10 flex items-center justify-center font-display font-bold text-primary-400 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
+                    <div className="w-14 h-14 rounded-2xl bg-secondary-800 border border-white/10 flex items-center justify-center font-display font-bold text-primary-400 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
                       {item.step}
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white mb-1">{item.title}</h4>
-                      <p className="text-secondary-500 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-secondary-400 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}

@@ -36,24 +36,24 @@ const Header = () => {
           >
             <div className="container mx-auto px-4 flex justify-between items-center">
               <div className="flex gap-6">
-                <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors text-xs font-medium">
-                  <Mail className="w-3.5 h-3.5 text-primary-400" />
+                <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-2 text-secondary-200 hover:text-secondary-50 transition-colors text-xs font-medium">
+                  <Mail className="w-3.5 h-3.5 text-primary-600" />
                   info@9X EVENTS.com
                 </a>
                 <div className="flex gap-4 border-l border-white/10 pl-4">
-                  <a href="tel:+918072896589" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors text-xs font-medium">
-                    <Phone className="w-3.5 h-3.5 text-primary-500" />
+                  <a href="tel:+918072896589" className="flex items-center gap-2 text-secondary-200 hover:text-secondary-50 transition-colors text-xs font-medium">
+                    <Phone className="w-3.5 h-3.5 text-primary-700" />
                     IN: +91 80728 96589
                   </a>
-                  <a href="tel:+966558891231" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors text-xs font-medium">
-                    <Phone className="w-3.5 h-3.5 text-primary-400" />
+                  <a href="tel:+966558891231" className="flex items-center gap-2 text-secondary-200 hover:text-secondary-50 transition-colors text-xs font-medium">
+                    <Phone className="w-3.5 h-3.5 text-primary-600" />
                     KSA: +966 55 889 1231
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.1em] text-secondary-500">
+              <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.1em] text-secondary-400">
                 <span className="flex items-center gap-1.5"><ShieldCheck className="w-3 h-3" /> Verified B2B Only</span>
-                <span className="w-1 h-1 rounded-full bg-secondary-700" />
+                <span className="w-1 h-1 rounded-full bg-secondary-300" />
                 <span className="flex items-center gap-1.5"><Globe className="w-3 h-3" /> 3-City India Tour</span>
               </div>
             </div>
@@ -89,18 +89,18 @@ const Header = () => {
                     exit={{ opacity: 0, x: 20 }}
                     className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur-md"
                   >
-                    <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors group">
-                      <Mail className="w-3.5 h-3.5 text-primary-400" />
+                    <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-2 text-secondary-300 hover:text-secondary-50 transition-colors group">
+                      <Mail className="w-3.5 h-3.5 text-primary-600" />
                       <span className="text-xs font-medium tracking-tight">info@9X EVENTS.com</span>
                     </a>
                     <div className="w-px h-3 bg-white/10" />
-                    <a href="tel:+918072896589" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors group">
-                      <Phone className="w-3.5 h-3.5 text-primary-500" />
+                    <a href="tel:+918072896589" className="flex items-center gap-2 text-secondary-300 hover:text-secondary-50 transition-colors group">
+                      <Phone className="w-3.5 h-3.5 text-primary-700" />
                       <span className="text-xs font-medium tracking-tight">+91 80728 96589</span>
                     </a>
                     <div className="w-px h-3 bg-white/10" />
-                    <a href="tel:+966558891231" className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors group">
-                      <Phone className="w-3.5 h-3.5 text-accent-500" />
+                    <a href="tel:+966558891231" className="flex items-center gap-2 text-secondary-300 hover:text-secondary-50 transition-colors group">
+                      <Phone className="w-3.5 h-3.5 text-accent-600" />
                       <span className="text-xs font-medium tracking-tight">+966 55 889 1231</span>
                     </a>
                   </motion.div>
@@ -110,7 +110,7 @@ const Header = () => {
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => scrollToSection('exhibit')}
-                  className="px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-sm transition-all hover:-translate-y-0.5 shadow-lg shadow-primary-500/20"
+                  className="px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-secondary-900 font-bold text-sm transition-all hover:-translate-y-0.5 shadow-lg shadow-primary-500/20"
                 >
                   Exhibit at ISUC
                 </button>
@@ -125,7 +125,7 @@ const Header = () => {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+              className="lg:hidden p-2 text-secondary-50 hover:bg-secondary-100 rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -145,18 +145,18 @@ const Header = () => {
               <div className="p-6 space-y-6">
 
                 <div className="pt-6 border-t border-white/10 space-y-4">
-                  <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-3 text-secondary-300">
-                    <Mail className="w-5 h-5 text-primary-400" /> info@9X EVENTS.com
+                  <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-3 text-secondary-100">
+                    <Mail className="w-5 h-5 text-primary-600" /> info@9X EVENTS.com
                   </a>
-                  <a href="tel:+918072896589" className="flex items-center gap-3 text-secondary-300">
-                    <Phone className="w-5 h-5 text-primary-500" /> IN: +91 80728 96589
+                  <a href="tel:+918072896589" className="flex items-center gap-3 text-secondary-100">
+                    <Phone className="w-5 h-5 text-primary-700" /> IN: +91 80728 96589
                   </a>
-                  <a href="tel:+966558891231" className="flex items-center gap-3 text-secondary-300">
-                    <Phone className="w-5 h-5 text-accent-500" /> KSA: +966 55 889 1231
+                  <a href="tel:+966558891231" className="flex items-center gap-3 text-secondary-100">
+                    <Phone className="w-5 h-5 text-accent-600" /> KSA: +966 55 889 1231
                   </a>
                 </div>
                 <div className="grid grid-cols-1 gap-3 pt-4">
-                  <button onClick={() => scrollToSection('exhibit')} className="w-full py-4 bg-primary-600 rounded-xl font-bold text-white">Exhibit at ISUC</button>
+                  <button onClick={() => scrollToSection('exhibit')} className="w-full py-4 bg-primary-600 rounded-xl font-bold text-secondary-900">Exhibit at ISUC</button>
                   <button onClick={() => scrollToSection('register-buyer')} className="w-full py-4 bg-accent-500 rounded-xl font-bold text-secondary-900">Register as Buyer</button>
                 </div>
               </div>

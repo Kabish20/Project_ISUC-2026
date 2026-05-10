@@ -15,7 +15,7 @@ const FAQItem = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left group transition-all"
       >
-        <span className="text-lg font-bold text-secondary-200 group-hover:text-primary-400 transition-colors">{question}</span>
+        <span className="text-lg font-bold text-white group-hover:text-primary-400 transition-colors">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-secondary-400 group-hover:bg-primary-500/20 group-hover:text-primary-400"
@@ -111,7 +111,7 @@ const RegisterBuyer = () => {
             initial={{ opacity: 0, y: 30 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl font-display font-bold mb-8 leading-[1.1] tracking-tight"
+            className="text-5xl md:text-6xl font-display font-bold mb-8 leading-[1.1] tracking-tight text-white"
           >
             Scale Your Umrah <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-300 via-orange-400 to-accent-500">
@@ -126,7 +126,7 @@ const RegisterBuyer = () => {
             className="text-lg md:text-xl text-secondary-300 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
           >
             Stop chasing suppliers. Let them come to you. <br />
-            Meet <span className="text-accent-400">40+ Saudi decision-makers</span> in your city for pre-matched, high-volume business sessions.
+            Meet <span className="text-accent-400 font-bold">40+ Saudi decision-makers</span> in your city for pre-matched, high-volume business sessions.
           </motion.p>
 
           <motion.div 
@@ -179,7 +179,7 @@ const RegisterBuyer = () => {
                 India's 1.8M+ <br />
                 <span className="text-accent-400">Pilgrim Market.</span>
               </h2>
-              <p className="text-lg text-secondary-400 mb-10 leading-relaxed">
+              <p className="text-lg text-secondary-400 mb-10 leading-relaxed font-medium">
                 In 2025, India emerged as one of the fastest-growing Umrah markets. ISUC 2026 brings the sources of that growth directly to your doorstep. This is where high-volume agents find the inventory they need to dominate the season.
               </p>
               
@@ -221,10 +221,10 @@ const RegisterBuyer = () => {
       <div className="py-32 relative">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight">
               A Private Room. <br /> <span className="text-accent-400">Public Gains.</span>
             </h2>
-            <p className="text-secondary-400 text-lg">
+            <p className="text-secondary-400 font-medium text-lg">
               ISUC 2026 is not an exhibition. It is a series of private, high-value business meetings curated specifically for your profile.
             </p>
           </div>
@@ -240,11 +240,11 @@ const RegisterBuyer = () => {
                 whileHover={{ y: -10 }}
                 className="p-10 rounded-[35px] bg-white/5 border border-white/10 hover:border-accent-500/30 hover:bg-white/8 transition-all duration-500 group relative overflow-hidden"
               >
-                <div className="w-16 h-16 rounded-2xl bg-secondary-900 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-accent-500 group-hover:text-secondary-900 transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-secondary-900 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-accent-500 group-hover:text-secondary-900 transition-all duration-300 shadow-sm">
                   {b.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-accent-400 transition-colors">{b.title}</h3>
-                <p className="text-secondary-400 leading-relaxed">{b.desc}</p>
+                <p className="text-secondary-400 font-medium leading-relaxed">{b.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -260,7 +260,7 @@ const RegisterBuyer = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-display font-bold mb-8">Verification Process</h2>
+            <h2 className="text-4xl font-display font-bold text-white mb-8">Verification Process</h2>
               <div className="space-y-10 relative">
                 <div className="absolute left-[27px] top-4 bottom-4 w-px bg-accent-500/20" />
                 {[
@@ -275,7 +275,7 @@ const RegisterBuyer = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white mb-1">{item.title}</h4>
-                      <p className="text-secondary-500 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-secondary-500 text-sm font-medium leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -304,7 +304,7 @@ const RegisterBuyer = () => {
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-4 text-secondary-300 group">
                     <CheckCircle2 className="w-5 h-5 text-primary-400 shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="font-medium">{item}</span>
+                    <span className="font-bold">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -323,8 +323,8 @@ const RegisterBuyer = () => {
       <div className="py-32">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-display font-bold mb-4">Common Questions</h2>
-            <p className="text-secondary-400">Everything you need to know about attending as a buyer.</p>
+            <h2 className="text-4xl font-display font-bold text-white mb-4">Common Questions</h2>
+            <p className="text-secondary-400 font-medium">Everything you need to know about attending as a buyer.</p>
           </div>
           <div className="bg-white/5 rounded-[40px] border border-white/10 p-10 md:p-16 backdrop-blur-sm">
             {faqs.map((faq, i) => <FAQItem key={i} {...faq} />)}

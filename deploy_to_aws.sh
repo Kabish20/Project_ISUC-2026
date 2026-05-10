@@ -54,8 +54,9 @@ echo "Configuring Nginx..."
 CONF_FILE="/etc/nginx/sites-available/isuc-project"
 sudo tee $CONF_FILE <<EOF
 server {
-    listen 80;
-    server_name 52.65.150.105;
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name isuc2026.com www.isuc2026.com 52.65.150.105;
 
     root $REPO_DIR/dist;
     index index.html;
