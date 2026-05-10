@@ -1,5 +1,5 @@
-import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   const scrollTo = (id) => {
@@ -20,13 +20,13 @@ const Footer = () => {
   ];
 
   const ctaLinks = [
-    { label: 'Saudi Suppliers → Exhibit', id: 'exhibit', color: 'text-blue-400 hover:text-blue-300' },
-    { label: 'Indian Agents → Buy', id: 'register-buyer', color: 'text-amber-400 hover:text-amber-300' },
-    { label: 'Brands → Sponsor', id: 'sponsor-deck', color: 'text-yellow-400 hover:text-yellow-300' },
+    { label: 'Saudi Suppliers → Exhibit', id: 'exhibit', color: 'text-primary-400 hover:text-primary-300' },
+    { label: 'Indian Agents → Buy', id: 'register-buyer', color: 'text-accent-400 hover:text-accent-300' },
+    { label: 'Brands → Sponsor', id: 'sponsor-deck', color: 'text-primary-500 hover:text-primary-400' },
   ];
 
   return (
-    <footer className="bg-slate-950 pt-16 pb-8 border-t border-slate-800">
+    <footer className="bg-secondary-900 pt-16 pb-8 border-t border-secondary-800">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-4 gap-10 mb-12">
 
@@ -34,12 +34,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center gap-2 mb-6 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-                <span className="text-white font-display font-bold text-xl">IS</span>
-              </div>
-              <span className="font-display font-bold text-2xl tracking-tight text-white">
-                ISUC 2026
-              </span>
+              <img 
+                src={logo} 
+                alt="ISUC 2026" 
+                className="h-20 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </button>
             <p className="text-slate-400 mb-6 leading-relaxed text-sm">
               Indo-Saudi Umrah Connect<br />
@@ -135,9 +134,9 @@ const Footer = () => {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollTo(link.id)}
-                    className="text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm text-left flex items-center gap-2 group"
+                    className="text-secondary-400 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm text-left flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-amber-400 transition-colors shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-secondary-600 group-hover:bg-primary-400 transition-colors shrink-0" />
                     {link.label}
                   </button>
                 </li>
@@ -148,8 +147,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 text-sm">
+        <div className="pt-8 border-t border-secondary-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-secondary-500 text-sm">
             Organized by Travizly © 2026. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">

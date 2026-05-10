@@ -15,13 +15,13 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900;
+    @apply bg-secondary-900 text-secondary-100;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl hover:from-blue-500 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-lg shadow-blue-500/30 overflow-hidden;
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl hover:from-primary-500 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 shadow-lg shadow-primary-500/30 overflow-hidden;
   }
   
   .btn-primary::after {
@@ -29,15 +29,15 @@
   }
 
   .btn-secondary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-slate-900 transition-all duration-300 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm overflow-hidden;
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-secondary-800 border border-secondary-700 rounded-xl hover:bg-secondary-700 hover:border-secondary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500 shadow-sm overflow-hidden;
   }
   
   .btn-secondary::after {
-    @apply content-[''] absolute inset-0 bg-slate-100/50 translate-y-full hover:translate-y-0 transition-transform duration-300 ease-out;
+    @apply content-[''] absolute inset-0 bg-secondary-100/50 translate-y-full hover:translate-y-0 transition-transform duration-300 ease-out;
   }
 
   .btn-accent {
-    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl hover:from-amber-400 hover:to-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 shadow-lg shadow-orange-500/30 overflow-hidden;
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-secondary-900 transition-all duration-300 bg-gradient-to-r from-accent-400 to-accent-600 rounded-xl hover:from-accent-300 hover:to-accent-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 shadow-lg shadow-accent-500/30 overflow-hidden;
   }
   
   .btn-accent::after {
@@ -45,6 +45,6 @@
   }
 
   .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+    @apply bg-secondary-900/40 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl;
   }
 }

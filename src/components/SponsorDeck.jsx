@@ -19,10 +19,10 @@ const SponsorDeck = () => {
       title: 'Title Partner',
       tag: 'Exclusive · One Only',
       bestFor: 'Large Saudi DMCs & Tourism Boards',
-      color: 'from-yellow-400 to-amber-600',
-      glow: 'rgba(234,179,8,0.4)',
-      border: 'border-yellow-500/50',
-      badge: 'bg-yellow-500 text-slate-950 font-black',
+      color: 'from-primary-400 to-primary-700',
+      glow: 'rgba(182,141,64,0.4)',
+      border: 'border-primary-500/50',
+      badge: 'bg-primary-500 text-secondary-900 font-black',
       popular: true,
       features: [
         'Presented by [Your Brand] across all materials',
@@ -57,10 +57,10 @@ const SponsorDeck = () => {
       title: 'Category Partner',
       tag: 'Segment Exclusivity',
       bestFor: 'Tech Platforms & Visa Companies',
-      color: 'from-blue-400 to-indigo-600',
-      glow: 'rgba(59,130,246,0.2)',
-      border: 'border-blue-500/30',
-      badge: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
+      color: 'from-accent-400 to-accent-600',
+      glow: 'rgba(251,177,17,0.2)',
+      border: 'border-accent-500/30',
+      badge: 'bg-accent-500/20 text-accent-400 border-accent-500/30',
       popular: false,
       features: [
         'Official [Category] Partner Status',
@@ -80,7 +80,7 @@ const SponsorDeck = () => {
   ];
 
   return (
-    <div id="sponsor-deck" ref={containerRef} className="relative bg-slate-950 text-white selection:bg-yellow-500/30">
+    <div id="sponsor-deck" ref={containerRef} className="relative bg-secondary-900 text-white selection:bg-primary-500/30">
       
       {/* ── Massive Hero Section ── */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -91,8 +91,8 @@ const SponsorDeck = () => {
             alt="Sponsorship at ISUC 2026" 
             className="absolute inset-0 w-full h-[120%] -top-[10%] object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950" />
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-950/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-secondary-900/80 via-secondary-900/40 to-secondary-900" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/60 to-transparent" />
         </div>
 
         {/* Floating particles */}
@@ -114,7 +114,7 @@ const SponsorDeck = () => {
             initial={{ opacity: 0, y: -20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-yellow-500/20 border border-yellow-400/40 text-yellow-300 text-sm font-bold mb-10 backdrop-blur-md"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary-500/20 border border-primary-400/40 text-primary-300 text-sm font-bold mb-10 backdrop-blur-md"
           >
             <Sparkles className="w-4 h-4" />
             PARTNERSHIP OPPORTUNITIES — ISUC 2026
@@ -127,7 +127,7 @@ const SponsorDeck = () => {
             className="text-5xl md:text-6xl font-display font-bold mb-8 leading-[1.1] tracking-tight"
           >
             The Ultimate <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 via-primary-500 to-accent-600">
               Brand Positioning.
             </span>
           </motion.h1>
@@ -150,7 +150,7 @@ const SponsorDeck = () => {
           >
             <a 
               href="mailto:info@travizly.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
-              className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-yellow-500 hover:bg-yellow-400 text-slate-950 rounded-xl shadow-[0_0_40px_rgba(245,158,11,0.5)] transition-all duration-300 hover:-translate-y-1"
+              className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-primary-600 hover:bg-primary-500 text-white rounded-xl shadow-[0_0_40px_rgba(182,141,64,0.4)] transition-all duration-300 hover:-translate-y-1"
             >
               <Download className="w-5 h-5 fill-current" />
               Request Sponsor Deck
@@ -167,7 +167,7 @@ const SponsorDeck = () => {
       </div>
 
       {/* ── Value Proposition Grid ── */}
-      <div className="py-24 bg-slate-900 border-y border-white/5 relative overflow-hidden">
+      <div className="py-24 bg-secondary-900 border-y border-white/5 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {valueProps.map((prop, i) => (
@@ -177,7 +177,7 @@ const SponsorDeck = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-3xl bg-slate-950 border border-white/5 hover:border-yellow-500/30 transition-all duration-300 group"
+                className="p-8 rounded-3xl bg-secondary-900 border border-white/5 hover:border-yellow-500/30 transition-all duration-300 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <div className="text-yellow-400">{prop.icon}</div>
@@ -212,17 +212,17 @@ const SponsorDeck = () => {
                 transition={{ delay: i * 0.15 }}
                 className={`relative p-1 rounded-[40px] ${tier.popular ? 'bg-gradient-to-b from-yellow-400 to-amber-600' : 'bg-white/10'}`}
               >
-                <div className="bg-slate-950 rounded-[38px] h-full p-10 flex flex-col relative overflow-hidden group">
+                <div className="bg-secondary-900 rounded-[38px] h-full p-10 flex flex-col relative overflow-hidden group">
                   {tier.popular && (
                     <div className="absolute top-6 right-6">
-                      <span className="bg-yellow-500 text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                      <span className="bg-yellow-500 text-secondary-900 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
                         Most Impact
                       </span>
                     </div>
                   )}
                   
                   <div className="mb-10 relative">
-                    <div className={`w-20 h-20 rounded-[28px] bg-gradient-to-br ${tier.color} flex items-center justify-center text-slate-950 shadow-2xl mb-8 group-hover:scale-110 transition-transform duration-500`}>
+                    <div className={`w-20 h-20 rounded-[28px] bg-gradient-to-br ${tier.color} flex items-center justify-center text-secondary-900 shadow-2xl mb-8 group-hover:scale-110 transition-transform duration-500`}>
                       {tier.icon}
                     </div>
                     <h3 className="text-3xl font-display font-bold text-white mb-2">{tier.title}</h3>
@@ -242,7 +242,7 @@ const SponsorDeck = () => {
                     ))}
                   </div>
 
-                  <button className={`w-full py-5 rounded-2xl font-bold text-lg transition-all duration-300 ${tier.popular ? 'bg-yellow-500 text-slate-950 hover:bg-yellow-400 shadow-2xl' : 'bg-white/10 text-white hover:bg-white/20 border border-white/10'}`}>
+                  <button className={`w-full py-5 rounded-2xl font-bold text-lg transition-all duration-300 ${tier.popular ? 'bg-yellow-500 text-secondary-900 hover:bg-yellow-400 shadow-2xl' : 'bg-white/10 text-white hover:bg-white/20 border border-white/10'}`}>
                     Request Proposal
                   </button>
                 </div>
@@ -298,21 +298,21 @@ const SponsorDeck = () => {
               <div className="absolute -inset-10 bg-yellow-500/10 blur-[120px] rounded-full" />
               <div className="relative z-10 grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="bg-slate-950 border border-white/5 p-8 rounded-[40px] shadow-2xl">
+                  <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl">
                     <div className="text-4xl font-display font-bold text-yellow-400 mb-2">300+</div>
                     <div className="text-xs text-slate-500 uppercase font-black tracking-widest">Targeted Buyers</div>
                   </div>
-                  <div className="bg-slate-950 border border-white/5 p-8 rounded-[40px] shadow-2xl translate-x-8">
+                  <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl translate-x-8">
                     <div className="text-4xl font-display font-bold text-white mb-2">4</div>
                     <div className="text-xs text-slate-500 uppercase font-black tracking-widest">Major Hub Cities</div>
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
-                  <div className="bg-slate-950 border border-white/5 p-8 rounded-[40px] shadow-2xl">
+                  <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl">
                     <div className="text-4xl font-display font-bold text-blue-400 mb-2">7</div>
                     <div className="text-xs text-slate-500 uppercase font-black tracking-widest">Days Exposure</div>
                   </div>
-                  <div className="bg-slate-950 border border-white/5 p-8 rounded-[40px] shadow-2xl -translate-x-4">
+                  <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl -translate-x-4">
                     <div className="text-4xl font-display font-bold text-emerald-400 mb-2">100%</div>
                     <div className="text-xs text-slate-500 uppercase font-black tracking-widest">B2B Verified</div>
                   </div>
@@ -334,7 +334,7 @@ const SponsorDeck = () => {
           >
             <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-950 mb-8 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-secondary-900 mb-8 leading-tight">
                 Claim Your <br /> Marketplace Status.
               </h2>
               <p className="text-xl text-slate-900 font-bold mb-12 max-w-2xl mx-auto">
@@ -344,13 +344,13 @@ const SponsorDeck = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a 
                   href="mailto:info@travizly.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
-                  className="px-12 py-6 bg-slate-950 text-white font-bold text-xl rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl"
+                  className="px-12 py-6 bg-secondary-900 text-white font-bold text-xl rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl"
                 >
                   Download Partnership Deck
                 </a>
                 <a 
                   href="tel:+918072896589"
-                  className="px-12 py-6 bg-white/20 backdrop-blur-md text-slate-950 font-bold text-xl rounded-2xl hover:bg-white/30 transition-all duration-300 border border-white/20"
+                  className="px-12 py-6 bg-white/20 backdrop-blur-md text-secondary-900 font-bold text-xl rounded-2xl hover:bg-white/30 transition-all duration-300 border border-white/20"
                 >
                   Talk to Organizer
                 </a>

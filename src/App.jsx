@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen bg-slate-950 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`min-h-screen bg-secondary-900 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <Header />
       <Hero />
       <WhyISUC />

@@ -22,8 +22,8 @@ const Venue = () => {
           alt="Premium Venue" 
           className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-900/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900 via-slate-900/95 to-slate-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 to-transparent opacity-80"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

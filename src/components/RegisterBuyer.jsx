@@ -15,10 +15,10 @@ const FAQItem = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left group transition-all"
       >
-        <span className="text-lg font-bold text-slate-200 group-hover:text-amber-400 transition-colors">{question}</span>
+        <span className="text-lg font-bold text-secondary-200 group-hover:text-primary-400 transition-colors">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
-          className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-amber-500/20 group-hover:text-amber-400"
+          className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-secondary-400 group-hover:bg-primary-500/20 group-hover:text-primary-400"
         >
           <ChevronDown className="w-5 h-5" />
         </motion.div>
@@ -43,10 +43,10 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const MarketStat = ({ value, label, sub }) => (
-  <div className="text-center p-6 rounded-3xl bg-amber-500/5 border border-amber-500/10 hover:border-amber-500/30 transition-all duration-300">
-    <div className="text-3xl font-display font-bold text-amber-400 mb-1">{value}</div>
+  <div className="text-center p-6 rounded-3xl bg-primary-500/5 border border-primary-500/10 hover:border-primary-500/30 transition-all duration-300">
+    <div className="text-3xl font-display font-bold text-primary-400 mb-1">{value}</div>
     <div className="text-white font-bold text-sm mb-1 uppercase tracking-wider">{label}</div>
-    <div className="text-slate-500 text-xs">{sub}</div>
+    <div className="text-secondary-500 text-xs">{sub}</div>
   </div>
 );
 
@@ -56,12 +56,12 @@ const RegisterBuyer = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
   
   const benefits = [
-    { icon: <Building2 className="w-6 h-6 text-blue-400" />, title: '40+ Saudi Suppliers in Your City', desc: 'Meet top-tier DMCs, 5-star hotels from Makkah & Madinah, and transport giants directly in your own city.', color: 'bg-blue-500', delay: 0.1 },
-    { icon: <TrendingUp className="w-6 h-6 text-amber-400" />, title: 'Direct Season Contracting', desc: 'Bypass all intermediaries. Negotiate and sign direct contracts for the 2026-27 Umrah season for maximum margins.', color: 'bg-amber-500', delay: 0.2 },
+    { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: '40+ Saudi Suppliers in Your City', desc: 'Meet top-tier DMCs, 5-star hotels from Makkah & Madinah, and transport giants directly in your own city.', color: 'bg-primary-500', delay: 0.1 },
+    { icon: <TrendingUp className="w-6 h-6 text-accent-400" />, title: 'Direct Season Contracting', desc: 'Bypass all intermediaries. Negotiate and sign direct contracts for the 2026-27 Umrah season for maximum margins.', color: 'bg-accent-500', delay: 0.2 },
     { icon: <Clock className="w-6 h-6 text-emerald-400" />, title: 'Zero-Wait Meeting Schedule', desc: 'Your 15-20 meetings are pre-scheduled based on your profile. No standing in lines or random booth visits.', color: 'bg-emerald-500', delay: 0.3 },
-    { icon: <Globe className="w-6 h-6 text-indigo-400" />, title: 'New Product Previews', desc: 'Get first access to exclusive hotel room allotments and luxury transport packages before they hit the general market.', color: 'bg-indigo-500', delay: 0.4 },
-    { icon: <Award className="w-6 h-6 text-rose-400" />, title: 'VIP Networking Dinners', desc: 'Connect with Saudi decision-makers in a premium setting during our evening gala networking dinners.', color: 'bg-rose-500', delay: 0.5 },
-    { icon: <Briefcase className="w-6 h-6 text-yellow-400" />, title: 'IATA Agent Ecosystem', desc: 'Network with India\'s elite 150-300 Umrah agents. Build regional and national partnerships with your peers.', color: 'bg-yellow-500', delay: 0.6 },
+    { icon: <Globe className="w-6 h-6 text-primary-400" />, title: 'New Product Previews', desc: 'Get first access to exclusive hotel room allotments and luxury transport packages before they hit the general market.', color: 'bg-primary-500', delay: 0.4 },
+    { icon: <Award className="w-6 h-6 text-accent-400" />, title: 'VIP Networking Dinners', desc: 'Connect with Saudi decision-makers in a premium setting during our evening gala networking dinners.', color: 'bg-accent-500', delay: 0.5 },
+    { icon: <Briefcase className="w-6 h-6 text-primary-400" />, title: 'IATA Agent Ecosystem', desc: 'Network with India\'s elite 150-300 Umrah agents. Build regional and national partnerships with your peers.', color: 'bg-primary-500', delay: 0.6 },
   ];
 
   const faqs = [
@@ -72,7 +72,7 @@ const RegisterBuyer = () => {
   ];
 
   return (
-    <div id="register-buyer" ref={containerRef} className="relative bg-slate-950 text-white selection:bg-amber-500/30">
+    <div id="register-buyer" ref={containerRef} className="relative bg-secondary-900 text-white selection:bg-amber-500/30">
       
       {/* ── Massive Hero Section ── */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -83,8 +83,8 @@ const RegisterBuyer = () => {
             alt="Register as Buyer" 
             className="absolute inset-0 w-full h-[120%] -top-[10%] object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950" />
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-950/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-secondary-900/80 via-secondary-900/40 to-secondary-900" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/60 to-transparent" />
         </div>
 
         {/* Floating orbs */}
@@ -137,7 +137,7 @@ const RegisterBuyer = () => {
           >
             <a 
               href="#apply-now"
-              className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl shadow-[0_0_40px_rgba(245,158,11,0.5)] transition-all duration-300 hover:-translate-y-1"
+              className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-primary-600 hover:bg-primary-500 text-white rounded-xl shadow-[0_0_40px_rgba(182,141,64,0.4)] transition-all duration-300 hover:-translate-y-1"
             >
               <Zap className="w-5 h-5 fill-current" />
               Apply as Verified Buyer
@@ -205,7 +205,7 @@ const RegisterBuyer = () => {
               ].map((c, i) => (
                 <div key={i} className="relative rounded-3xl overflow-hidden group aspect-square border border-white/10 hover:border-amber-500/40 transition-colors">
                   <img src={c.img} alt={c.city} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/20 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <h4 className="text-xl font-bold text-white mb-0.5">{c.city}</h4>
                     <p className="text-amber-400 text-xs font-bold uppercase tracking-widest">{c.date}</p>
@@ -240,7 +240,7 @@ const RegisterBuyer = () => {
                 whileHover={{ y: -10 }}
                 className="p-10 rounded-[35px] bg-white/5 border border-white/10 hover:border-amber-500/30 hover:bg-white/8 transition-all duration-500 group relative overflow-hidden"
               >
-                <div className="w-16 h-16 rounded-2xl bg-slate-900 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-slate-900 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-secondary-900 transition-all duration-300">
                   {b.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-amber-400 transition-colors">{b.title}</h3>
@@ -270,7 +270,7 @@ const RegisterBuyer = () => {
                   { step: "04", title: "Final Invitation", desc: "Receive your city-specific badge and meeting itinerary." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-8 relative z-10 group">
-                    <div className="w-14 h-14 rounded-full bg-slate-900 border border-amber-500/30 flex items-center justify-center font-display font-bold text-amber-400 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300">
+                    <div className="w-14 h-14 rounded-full bg-slate-900 border border-amber-500/30 flex items-center justify-center font-display font-bold text-amber-400 group-hover:bg-amber-500 group-hover:text-secondary-900 transition-all duration-300">
                       {item.step}
                     </div>
                     <div>
@@ -345,7 +345,7 @@ const RegisterBuyer = () => {
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
             
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-950 mb-8 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-secondary-900 mb-8 leading-tight">
                 Secure Your <br /> Season Inventory.
               </h2>
               <p className="text-xl text-slate-900/80 mb-12 max-w-2xl mx-auto font-bold">
@@ -355,7 +355,7 @@ const RegisterBuyer = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <a
                   href="https://zoho.com/buyer-reg"
-                  className="px-12 py-6 bg-slate-950 text-white font-bold text-xl rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl"
+                  className="px-12 py-6 bg-secondary-900 text-white font-bold text-xl rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl"
                 >
                   Apply as Verified Buyer
                 </a>
@@ -368,7 +368,7 @@ const RegisterBuyer = () => {
                     ))}
                   </div>
                   <div className="text-left">
-                    <div className="text-slate-950 font-bold text-sm uppercase tracking-widest">Join 150+</div>
+                    <div className="text-secondary-900 font-bold text-sm uppercase tracking-widest">Join 150+</div>
                     <div className="text-slate-900/60 text-xs font-bold uppercase tracking-widest">Verified Agents</div>
                   </div>
                 </div>

@@ -21,8 +21,8 @@ const WhyISUC = () => {
         <hr style="margin: 30px 0; border: 0; border-top: 2px solid #e2e8f0;" />
         
         <div style="margin-bottom: 30px;">
-          <h2 style="color: #0f172a; font-size: 24px; border-left: 4px solid #f59e0b; padding-left: 15px; margin-bottom: 15px;">Event Mission</h2>
-          <p style="font-size: 16px; color: #475569;">India is the fastest-growing Umrah market globally, sending over 1.8M pilgrims in 2025. ISUC-2026 perfectly bridges the gap between Saudi suppliers and Indian operators.</p>
+          <h2 style="color: #1a1a1a; font-size: 24px; border-left: 4px solid #b68d40; padding-left: 15px; margin-bottom: 15px;">Event Mission</h2>
+          <p style="font-size: 16px; color: #454545;">India is the fastest-growing Umrah market globally, sending over 1.8M pilgrims in 2025. ISUC-2026 perfectly bridges the gap between Saudi suppliers and Indian operators.</p>
         </div>
         
         <div style="margin-bottom: 30px;">
@@ -91,10 +91,10 @@ const WhyISUC = () => {
   };
 
   return (
-    <section id="why" className="py-16 bg-slate-900 relative overflow-hidden">
+    <section id="why" className="py-16 bg-secondary-900 relative overflow-hidden">
       {/* Decorative background blobs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -104,7 +104,7 @@ const WhyISUC = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-display font-bold text-white mb-6"
           >
-            Why India. Why Now. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-300">Why ISUC.</span>
+            Why India. Why Now. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-300">Why ISUC.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -151,14 +151,14 @@ const WhyISUC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-slate-900/60 transition-all duration-500 group-hover:from-slate-900 group-hover:via-slate-900/80 group-hover:to-slate-900/50"></div>
             </div>
             <div className="relative z-10">
-              <div className="w-14 h-14 bg-amber-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-500 border border-amber-500/30 shadow-lg">
-                <Users className="w-7 h-7 text-amber-400 group-hover:text-slate-900 transition-colors" />
+              <div className="w-14 h-14 bg-accent-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent-500 transition-all duration-500 border border-accent-500/30 shadow-lg">
+                <Users className="w-7 h-7 text-accent-400 group-hover:text-secondary-900 transition-colors" />
               </div>
               <h3 className="text-2xl font-display font-bold text-white mb-4">For Indian Buyers</h3>
               <p className="text-slate-300 leading-relaxed mb-4 font-medium">
-                Meet <strong className="text-amber-400">40+ premium Saudi DMCs, Hotels, Transport & Tech companies</strong> in your city. Contract direct. Better rates. New products for 2026 season.
+                Meet <strong className="text-accent-400">40+ premium Saudi DMCs, Hotels, Transport & Tech companies</strong> in your city. Contract direct. Better rates. New products for 2026 season.
               </p>
-              <p className="font-semibold text-white bg-amber-500/20 p-3 rounded-lg border border-amber-500/30 backdrop-blur-sm">
+              <p className="font-semibold text-white bg-accent-500/20 p-3 rounded-lg border border-accent-500/30 backdrop-blur-sm">
                 No exhibition crowds. Just business.
               </p>
             </div>
@@ -171,14 +171,14 @@ const WhyISUC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-slate-900/60 transition-all duration-500 group-hover:from-slate-900 group-hover:via-slate-900/80 group-hover:to-slate-900/50"></div>
             </div>
             <div className="relative z-10">
-              <div className="w-14 h-14 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-indigo-500 transition-all duration-500 border border-indigo-500/30 shadow-lg">
-                <Target className="w-7 h-7 text-indigo-400 group-hover:text-white transition-colors" />
+              <div className="w-14 h-14 bg-primary-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary-600 transition-all duration-500 border border-primary-600/30 shadow-lg">
+                <Target className="w-7 h-7 text-primary-400 group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-2xl font-display font-bold text-white mb-4">For Sponsors</h3>
               <p className="text-slate-300 leading-relaxed mb-4 font-medium">
-                <strong className="text-indigo-400">Own the conversation</strong> between Saudi & India's Umrah trade. Title Partner branding across 4 cities + 600+ targeted meetings.
+                <strong className="text-primary-400">Own the conversation</strong> between Saudi & India's Umrah trade. Title Partner branding across 4 cities + 600+ targeted meetings.
               </p>
-              <p className="font-semibold text-white bg-indigo-500/20 p-3 rounded-lg border border-indigo-500/30 backdrop-blur-sm">
+              <p className="font-semibold text-white bg-primary-600/20 p-3 rounded-lg border border-primary-600/30 backdrop-blur-sm">
                 This becomes your annual India pipeline.
               </p>
             </div>

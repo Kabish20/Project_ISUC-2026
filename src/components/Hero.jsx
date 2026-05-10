@@ -4,7 +4,7 @@ import { MapPin, Calendar, CheckCircle2 } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center pt-20 overflow-hidden bg-slate-900">
+    <section className="relative min-h-[100svh] flex items-center justify-center pt-20 overflow-hidden bg-secondary-900">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <motion.img 
@@ -15,8 +15,8 @@ const Hero = () => {
           alt="B2B Trade Event Background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-950/80 via-primary-900/60 to-slate-950"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-950/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary-900/80 via-secondary-900/60 to-secondary-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/50 to-transparent"></div>
       </div>
 
       <div className="container relative z-10 mx-auto px-4 text-center">
@@ -27,22 +27,22 @@ const Hero = () => {
           className="max-w-5xl mx-auto"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span>
             India's Largest B2B Umrah Event
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight tracking-tight">
             INDO-SAUDI UMRAH <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-200 to-primary-500">
               CONNECT 2026
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-blue-100 mb-6 font-medium max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-primary-100 mb-6 font-medium max-w-3xl mx-auto">
             The Only Structured B2B Gateway to India's 1.8M+ Umrah Market
           </p>
 
-          <p className="text-base text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base text-secondary-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             4 Cities. 7 Days. 150-300 Verified Buyers. Direct Table Meetings. Zero Wasted Time.
           </p>
 
@@ -77,7 +77,7 @@ const Hero = () => {
           >
             <a href="#exhibit" className="btn-primary flex-1 group">
               <span className="relative z-10 flex flex-col items-center">
-                <span className="text-sm font-normal text-blue-100 mb-1 group-hover:text-white transition-colors">I'm a Saudi Supplier</span>
+                <span className="text-sm font-normal text-primary-100 mb-1 group-hover:text-white transition-colors">I'm a Saudi Supplier</span>
                 <span className="flex items-center gap-2">Exhibit at ISUC-2026 <span className="group-hover:translate-x-1 transition-transform">→</span></span>
               </span>
             </a>
@@ -119,7 +119,7 @@ const Hero = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-secondary-900 to-transparent z-10"></div>
     </section>
   );
 };

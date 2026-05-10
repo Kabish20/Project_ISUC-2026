@@ -34,14 +34,14 @@ const FeatureCard = ({ icon, title, desc, delay }) => (
     whileHover={{ y: -8, scale: 1.02 }}
     viewport={{ once: true }}
     transition={{ delay, duration: 0.5 }}
-    className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-blue-500/30 hover:bg-white/8 backdrop-blur-sm transition-all duration-500 group relative overflow-hidden"
+    className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-primary-500/30 hover:bg-white/8 backdrop-blur-sm transition-all duration-500 group relative overflow-hidden"
   >
-    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    <div className="w-14 h-14 rounded-2xl bg-slate-800 border border-white/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-500/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="w-14 h-14 rounded-2xl bg-secondary-800 border border-white/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
       {icon}
     </div>
-    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">{title}</h3>
-    <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
+    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-300 transition-colors">{title}</h3>
+    <p className="text-secondary-400 text-sm leading-relaxed">{desc}</p>
   </motion.div>
 );
 
@@ -52,12 +52,12 @@ const ExhibitPage = () => {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [1, 1, 0]);
 
   const tableFeatures = [
-    { icon: <Building2 className="w-6 h-6 text-blue-400" />, title: 'Branded Table in All 4 Cities', desc: 'Your dedicated premium exhibition space across Delhi, Mumbai, Hyderabad & Chennai — fully set up and managed.' },
-    { icon: <Users className="w-6 h-6 text-amber-400" />, title: '60–80 Pre-Matched Buyer Meetings', desc: 'Guaranteed face-to-face sessions with verified Indian operators matched to your hotel category, group size & regions.' },
+    { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: 'Branded Table in All 4 Cities', desc: 'Your dedicated premium exhibition space across Delhi, Mumbai, Hyderabad & Chennai — fully set up and managed.' },
+    { icon: <Users className="w-6 h-6 text-accent-400" />, title: '60–80 Pre-Matched Buyer Meetings', desc: 'Guaranteed face-to-face sessions with verified Indian operators matched to your hotel category, group size & regions.' },
     { icon: <Shield className="w-6 h-6 text-emerald-400" />, title: 'Zero Cold Outreach Needed', desc: 'We screen, qualify and schedule all buyer meetings. You arrive ready to close deals.' },
-    { icon: <Globe className="w-6 h-6 text-indigo-400" />, title: 'Access to 1.8M+ Pilgrim Market', desc: "India's Umrah market sent 1.8M pilgrims in 2025. 70% of volume controlled by the buyers you'll meet here." },
-    { icon: <Handshake className="w-6 h-6 text-rose-400" />, title: 'Networking Dinners Each Evening', desc: 'Exclusive gala dinners where real partnerships and MoUs are signed in a relaxed luxury setting.' },
-    { icon: <TrendingUp className="w-6 h-6 text-yellow-400" />, title: 'Full 7-Day Tour Managed', desc: 'From airport to airport — 4-star hotels, domestic flights, half-board meals, transfers. You just focus on business.' },
+    { icon: <Globe className="w-6 h-6 text-primary-400" />, title: 'Access to 1.8M+ Pilgrim Market', desc: "India's Umrah market sent 1.8M pilgrims in 2025. 70% of volume controlled by the buyers you'll meet here." },
+    { icon: <Handshake className="w-6 h-6 text-accent-400" />, title: 'Networking Dinners Each Evening', desc: 'Exclusive gala dinners where real partnerships and MoUs are signed in a relaxed luxury setting.' },
+    { icon: <TrendingUp className="w-6 h-6 text-primary-400" />, title: 'Full 7-Day Tour Managed', desc: 'From airport to airport — 4-star hotels, domestic flights, half-board meals, transfers. You just focus on business.' },
   ];
 
   const tourInclusions = [
@@ -68,7 +68,7 @@ const ExhibitPage = () => {
   ];
 
   return (
-    <div id="exhibit" ref={containerRef} className="relative bg-slate-950 text-white selection:bg-blue-500/30">
+    <div id="exhibit" ref={containerRef} className="relative bg-secondary-900 text-white selection:bg-primary-500/30">
       
       {/* ── Massive Hero Section ── */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -79,8 +79,8 @@ const ExhibitPage = () => {
             alt="Exhibit at ISUC 2026" 
             className="absolute inset-0 w-full h-[120%] -top-[10%] object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950" />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-950/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-secondary-900/80 via-secondary-900/40 to-secondary-900" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/60 to-transparent" />
         </div>
 
         {/* Floating background elements */}
@@ -113,12 +113,11 @@ const ExhibitPage = () => {
             initial={{ opacity: 0, y: -20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-blue-500/20 border border-blue-400/40 text-blue-300 text-sm font-bold mb-10 backdrop-blur-md"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary-500/20 border border-primary-400/40 text-primary-300 text-sm font-bold mb-10 backdrop-blur-md"
           >
             <Building2 className="w-4 h-4" />
             B2B EXHIBITOR OPPORTUNITY — SAUDI SUPPLIERS
           </motion.div>
-
           <motion.h1 
             initial={{ opacity: 0, y: 30 }} 
             animate={{ opacity: 1, y: 0 }} 
@@ -126,19 +125,18 @@ const ExhibitPage = () => {
             className="text-5xl md:text-6xl font-display font-bold mb-8 leading-[1.1] tracking-tight"
           >
             The Direct Path to <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-300 to-primary-600">
               India's Umrah Trade
             </span>
           </motion.h1>
-
           <motion.p 
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.45 }}
-            className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-lg md:text-xl text-secondary-200 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
           >
             Skip the booths. Skip the random footfall. <br />
-            Secure one of <span className="text-blue-400">40 exclusive tables</span> and meet India's top 300 buyers in focused, pre-scheduled sessions.
+            Secure one of <span className="text-primary-400">40 exclusive tables</span> and meet India's top 300 buyers in focused, pre-scheduled sessions.
           </motion.p>
 
           <motion.div 
@@ -149,7 +147,7 @@ const ExhibitPage = () => {
           >
             <button
               onClick={() => document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-blue-600 hover:bg-blue-500 text-white rounded-xl shadow-[0_0_40px_rgba(37,99,235,0.5)] transition-all duration-300 hover:-translate-y-1"
+              className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-primary-600 hover:bg-primary-500 text-white rounded-xl shadow-[0_0_40px_rgba(182,141,64,0.4)] transition-all duration-300 hover:-translate-y-1"
             >
               <Zap className="w-5 h-5 fill-current" />
               Reserve Exhibitor Table
@@ -202,10 +200,10 @@ const ExhibitPage = () => {
                 <div className="text-5xl md:text-6xl font-display font-bold text-white mb-3 flex items-center justify-center gap-1">
                   <CountUp end={item.stat} suffix={item.suffix} />
                 </div>
-                <div className="text-blue-400 font-bold tracking-widest uppercase text-xs mb-1 group-hover:text-white transition-colors">
+                <div className="text-primary-400 font-bold tracking-widest uppercase text-xs mb-1 group-hover:text-white transition-colors">
                   {item.label}
                 </div>
-                <div className="text-slate-500 text-sm">{item.sub}</div>
+                <div className="text-secondary-500 text-sm">{item.sub}</div>
               </motion.div>
             ))}
           </div>
@@ -289,8 +287,8 @@ const ExhibitPage = () => {
                 alt="Networking Gala" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-slate-950/80" />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-secondary-900/80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/40 via-transparent to-transparent" />
             </div>
 
             <div className="relative z-10 p-10 md:p-20 flex flex-col items-center text-center">
@@ -349,7 +347,7 @@ const ExhibitPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-3xl bg-slate-950 border border-white/5 hover:border-blue-500/30 transition-all duration-300 text-center group"
+                className="p-8 rounded-3xl bg-secondary-900 border border-white/5 hover:border-blue-500/30 transition-all duration-300 text-center group"
               >
                 <div className="w-16 h-16 rounded-2xl bg-blue-600/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <div className="text-blue-400">{item.icon}</div>
@@ -436,16 +434,16 @@ const ExhibitPage = () => {
 
       {/* ── Final CTA Section ── */}
       <div id="apply-form" className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-blue-600/5 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-primary-600/5 mix-blend-overlay" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto p-10 md:p-14 rounded-[32px] bg-gradient-to-br from-blue-600 to-indigo-800 relative overflow-hidden"
+            className="max-w-4xl mx-auto p-10 md:p-14 rounded-[32px] bg-gradient-to-br from-secondary-900 to-secondary-900 border border-primary-500/20 relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-500/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8">

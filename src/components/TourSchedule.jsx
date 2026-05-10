@@ -18,8 +18,8 @@ const TourSchedule = () => {
   ];
 
   return (
-    <section id="schedule" className="py-24 bg-slate-900 relative">
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#6366f1_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <section id="schedule" className="py-24 bg-secondary-900 relative">
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#b68d40_1px,transparent_1px)] [background-size:24px_24px]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
@@ -53,17 +53,17 @@ const TourSchedule = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
-                className="bg-slate-800 rounded-3xl p-8 shadow-lg border border-white/10 hover:border-primary-500/40 hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(99,102,241,0.3)] transition-all duration-500 relative group overflow-hidden"
+                className="bg-secondary-900 rounded-3xl p-8 shadow-lg border border-white/10 hover:border-primary-500/40 hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(182,141,64,0.3)] transition-all duration-500 relative group overflow-hidden"
               >
                 {/* Background nano banner image with overlay */}
                 <div className="absolute inset-0 z-0">
                   <img src={item.image} alt={item.city} className="w-full h-full object-cover opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-800 via-slate-800/80 to-slate-800/60 group-hover:from-slate-800/90 group-hover:to-slate-800/40 transition-all duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/80 to-secondary-900/60 group-hover:from-secondary-900/90 group-hover:to-secondary-900/40 transition-all duration-500"></div>
                 </div>
 
                 <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-600 rounded-full flex items-center justify-center mb-6 lg:mx-auto group-hover:from-primary-900 group-hover:to-primary-800 shadow-inner transition-colors duration-500 relative overflow-hidden">
-                    <MapPin className="w-7 h-7 text-slate-400 group-hover:text-primary-600 transition-colors duration-500 group-hover:scale-110 relative z-10" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-secondary-700 to-secondary-600 rounded-full flex items-center justify-center mb-6 lg:mx-auto group-hover:from-primary-900 group-hover:to-primary-800 shadow-inner transition-colors duration-500 relative overflow-hidden">
+                    <MapPin className="w-7 h-7 text-secondary-400 group-hover:text-primary-600 transition-colors duration-500 group-hover:scale-110 relative z-10" />
                   </div>
                   
                   <div className="lg:text-center">
@@ -90,7 +90,7 @@ const TourSchedule = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="max-w-4xl mx-auto bg-slate-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group"
+          className="max-w-4xl mx-auto bg-secondary-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group"
         >
           <div className="absolute inset-0 z-0">
              <img src="/assets/tour_banner.png" alt="Tour Route Map" className="w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700" />

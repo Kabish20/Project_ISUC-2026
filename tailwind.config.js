@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// Triggering reload
 export default {
   content: [
     "./index.html",
@@ -8,40 +9,40 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8', // Main primary
-          800: '#1e40af',
-          900: '#1e3a8a',
+          50: '#fbf8f1',
+          100: '#f5edd9',
+          200: '#ebdbb5',
+          300: '#dbbf84',
+          400: '#ca9e57',
+          500: '#b68d40', // Base Gold
+          600: '#a37635',
+          700: '#875e2d',
+          800: '#6e4c29',
+          900: '#342213', // Replaced 950
         },
         secondary: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
+          50: '#f6f6f6',
+          100: '#e7e7e7',
+          200: '#d1d1d1',
+          300: '#b0b0b0',
+          400: '#888888',
+          500: '#6d6d6d',
+          600: '#5d5d5d',
+          700: '#4f4f4f',
+          800: '#1a1a1a', // Near Black
+          900: '#000000', // Pure Black (Replaced 950)
         },
         accent: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
+          50: '#fffef2',
+          100: '#fffbd6',
+          200: '#fff3ad',
+          300: '#ffe575',
+          400: '#ffd03b',
+          500: '#fbb111', // Vibrant Gold
+          600: '#da8a07',
+          700: '#b5640a',
+          800: '#934e0e',
+          900: '#7a4110',
         }
       },
       fontFamily: {
