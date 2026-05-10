@@ -33,6 +33,7 @@ export default {
           900: '#ffffff', // White (Previously black)
         },
         accent: {
+          300: '#fde047',
           400: '#FACC15',
           500: '#EAB308', // Matches Logo Text "CONNECT 2026"
           600: '#CA8A04',
