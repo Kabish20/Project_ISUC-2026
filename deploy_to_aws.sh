@@ -49,10 +49,12 @@ chmod +x node_modules/.bin/vite
 echo "Building project..."
 npm run build
 
-# 5. Configure Nginx
-echo "Configuring Nginx..."
+# 5. Configure Nginx (only if not already configured with SSL)
+echo "Checking Nginx configuration..."
 CONF_FILE="/etc/nginx/sites-available/isuc-project"
-sudo tee $CONF_FILE <<EOF
+if ! sudo grep -q "ssl_certificate" $CONF_FILE 2>/dev/null; then
+    echo "Configuring basic Nginx..."
+    sudo tee $CONF_FILE <<EOF
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -66,14 +68,14 @@ server {
     }
 }
 EOF
+    # Enable site
+    sudo ln -sf $CONF_FILE /etc/nginx/sites-enabled/
+    sudo rm -f /etc/nginx/sites-enabled/default
+else
+    echo "SSL detected, skipping Nginx config overwrite to preserve certificates."
+fi
 
-# Ensure Nginx can read the files
-sudo chown -R www-data:www-data $REPO_DIR
-sudo chmod -R 755 $REPO_DIR
-
-# 6. Enable site and restart
-sudo ln -sf $CONF_FILE /etc/nginx/sites-enabled/
-sudo rm -f /etc/nginx/sites-enabled/default
+# 6. Final checks and restart
 sudo nginx -t
 sudo systemctl restart nginx
 
