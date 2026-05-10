@@ -25,9 +25,10 @@ sudo mkdir -p $REPO_DIR
 sudo chown -R ubuntu:ubuntu $REPO_DIR
 
 if [ -d "$REPO_DIR/.git" ]; then
-    echo "Updating repository..."
+    echo "Updating repository (force reset)..."
     cd "$REPO_DIR"
-    git pull
+    git fetch origin
+    git reset --hard origin/main
 else
     echo "Cloning repository..."
     sudo rm -rf $REPO_DIR/*
