@@ -7,12 +7,12 @@ const Hero = () => {
     <section className="relative min-h-[100svh] flex items-center justify-center pt-20 overflow-hidden bg-secondary-900">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <motion.img 
+        <motion.img
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.4 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          src="/assets/hero_banner.png" 
-          alt="B2B Trade Event Background" 
+          src="/assets/hero_banner.png"
+          alt="B2B Trade Event Background"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-secondary-900/80 via-secondary-900/60 to-secondary-900"></div>
@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight tracking-tight">
-            INDO-SAUDI UMRAH <br className="hidden md:block"/>
+            INDO-SAUDI UMRAH <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-200 to-primary-500">
               CONNECT 2026
             </span>
@@ -47,7 +47,7 @@ const Hero = () => {
           </p>
 
           {/* Date & Location Strip */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -69,7 +69,7 @@ const Hero = () => {
           </motion.div>
 
           {/* CTAs */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
@@ -96,7 +96,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Trust Bar */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}

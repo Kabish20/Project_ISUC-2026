@@ -63,8 +63,8 @@ const OrganizedBy = () => {
             <div className="p-10 md:p-16 bg-gradient-to-br from-secondary-900 to-secondary-900 backdrop-blur-xl text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-accent-500/20 rounded-full blur-2xl"></div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -107,8 +107,8 @@ const OrganizedBy = () => {
               >
                 Our Role at ISUC-2026
               </motion.h3>
-              
-              <motion.div 
+
+              <motion.div
                 className="space-y-6"
                 variants={containerVariants}
                 initial="hidden"
@@ -116,7 +116,7 @@ const OrganizedBy = () => {
                 viewport={{ once: true }}
               >
                 {roles.map((role, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     variants={itemVariants}
                     className="flex items-start gap-4 group"

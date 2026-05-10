@@ -65,13 +65,13 @@ const Header = () => {
       <nav className={`fixed left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'top-0 py-2 bg-secondary-900/90 backdrop-blur-xl border-b border-white/10 shadow-2xl' : 'top-10 py-4 bg-transparent'}`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <button 
+            <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center gap-2.5 group"
             >
-              <img 
-                src={logo} 
-                alt="Indo Saudi Umrah Connect 2026" 
+              <img
+                src={logo}
+                alt="Indo Saudi Umrah Connect 2026"
                 className={`${isScrolled ? 'h-16' : 'h-24'} w-auto object-contain transition-all duration-500 group-hover:scale-105`}
               />
             </button>
@@ -83,7 +83,7 @@ const Header = () => {
               {/* Contact details appearing inline when scrolled */}
               <AnimatePresence>
                 {isScrolled && (
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
@@ -124,7 +124,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Toggle */}
-            <button 
+            <button
               className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >

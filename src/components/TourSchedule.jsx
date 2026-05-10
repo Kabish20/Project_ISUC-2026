@@ -24,7 +24,7 @@ const TourSchedule = () => {
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#b68d40_1px,transparent_1px)] [background-size:24px_24px]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -32,7 +32,7 @@ const TourSchedule = () => {
           >
             6 Days. 3 Markets. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">Fully Managed.</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -46,10 +46,10 @@ const TourSchedule = () => {
         {/* Horizontal Timeline for Desktop / Vertical for Mobile */}
         <div className="max-w-5xl mx-auto mb-20 relative">
           <div className="hidden lg:block absolute top-1/2 left-8 right-8 h-1 bg-white/5 -translate-y-1/2 rounded-full"></div>
-          
+
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 relative z-10">
             {schedule.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -67,12 +67,12 @@ const TourSchedule = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-secondary-700 to-secondary-600 rounded-full flex items-center justify-center mb-6 lg:mx-auto group-hover:from-primary-900 group-hover:to-primary-800 shadow-inner transition-colors duration-500 relative overflow-hidden">
                     <MapPin className="w-7 h-7 text-secondary-400 group-hover:text-primary-600 transition-colors duration-500 group-hover:scale-110 relative z-10" />
                   </div>
-                  
+
                   <div className="lg:text-center">
                     <p className="text-primary-400 font-bold text-sm mb-2">{item.date}</p>
                     <h3 className="text-2xl font-display font-bold text-white mb-2">{item.city}</h3>
                     <p className="text-secondary-400 text-sm font-medium">{item.desc}</p>
-                    
+
                     {item.note && (
                       <div className="mt-4 flex items-start gap-2 bg-accent-50/80 backdrop-blur-sm border border-accent-100 p-3 rounded-xl text-accent-800 text-xs font-semibold lg:justify-center text-left shadow-sm">
                         <Info className="w-4 h-4 shrink-0 mt-0.5" />
@@ -87,7 +87,7 @@ const TourSchedule = () => {
         </div>
 
         {/* Exhibitor Inclusions */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -95,27 +95,27 @@ const TourSchedule = () => {
           className="max-w-4xl mx-auto bg-secondary-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group"
         >
           <div className="absolute inset-0 z-0">
-             <img src="/assets/tour_banner.png" alt="Tour Route Map" className="w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700" />
-             <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/60 to-transparent"></div>
+            <img src="/assets/tour_banner.png" alt="Tour Route Map" className="w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/60 to-transparent"></div>
           </div>
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary-600 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
-          
+
           <div className="relative z-10">
-          
-          <h3 className="text-2xl font-display font-bold mb-8 text-center">Fully Managed for Exhibitors</h3>
-          
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
-            {inclusions.map((inc, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white/10 px-6 py-3 rounded-full backdrop-blur-md border border-white/5">
-                {inc.icon}
-                <span className="font-medium">{inc.text}</span>
-              </div>
-            ))}
-          </div>
-          
-          <p className="text-center text-secondary-400 max-w-2xl mx-auto">
-            Plus dedicated on-ground support throughout the tour. You just focus on the meetings, we handle the logistics.
-          </p>
+
+            <h3 className="text-2xl font-display font-bold mb-8 text-center">Fully Managed for Exhibitors</h3>
+
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
+              {inclusions.map((inc, i) => (
+                <div key={i} className="flex items-center gap-3 bg-white/10 px-6 py-3 rounded-full backdrop-blur-md border border-white/5">
+                  {inc.icon}
+                  <span className="font-medium">{inc.text}</span>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-secondary-400 max-w-2xl mx-auto">
+              Plus dedicated on-ground support throughout the tour. You just focus on the meetings, we handle the logistics.
+            </p>
           </div>
         </motion.div>
       </div>

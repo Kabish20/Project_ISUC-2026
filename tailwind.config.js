@@ -9,40 +9,33 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#fbf8f1',
-          100: '#f5edd9',
-          200: '#ebdbb5',
-          300: '#dbbf84',
-          400: '#ca9e57',
-          500: '#b68d40', // Base Gold
-          600: '#a37635',
-          700: '#875e2d',
-          800: '#6e4c29',
-          900: '#342213', // Replaced 950
+          50: '#FFF9E1',
+          100: '#FEF0B3',
+          200: '#FDE682',
+          300: '#FBD84D',
+          400: '#F9C826',
+          500: '#D4AF37', // Refined Premium Metallic Gold
+          600: '#B8860B', // Darker Bronze for hover states
+          700: '#996515',
+          800: '#7A4D0F',
+          900: '#5C380A',
         },
         secondary: {
-          50: '#f6f6f6',
-          100: '#e7e7e7',
-          200: '#d1d1d1',
-          300: '#b0b0b0',
-          400: '#888888',
-          500: '#6d6d6d',
-          600: '#5d5d5d',
-          700: '#4f4f4f',
-          800: '#1a1a1a', // Near Black
-          900: '#000000', // Pure Black (Replaced 950)
+          50: '#000000', // Black (Previously white-ish)
+          100: '#1a1a1a',
+          200: '#2d2d2d',
+          300: '#404040',
+          400: '#525252',
+          500: '#737373',
+          600: '#a3a3a3',
+          700: '#d4d4d4',
+          800: '#f5f5f5',
+          900: '#ffffff', // White (Previously black)
         },
         accent: {
-          50: '#fffef2',
-          100: '#fffbd6',
-          200: '#fff3ad',
-          300: '#ffe575',
-          400: '#ffd03b',
-          500: '#fbb111', // Vibrant Gold
-          600: '#da8a07',
-          700: '#b5640a',
-          800: '#934e0e',
-          900: '#7a4110',
+          400: '#FACC15',
+          500: '#EAB308', // Matches Logo Text "CONNECT 2026"
+          600: '#CA8A04',
         }
       },
       fontFamily: {

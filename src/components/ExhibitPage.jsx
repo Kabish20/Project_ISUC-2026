@@ -69,14 +69,14 @@ const ExhibitPage = () => {
 
   return (
     <div id="exhibit" ref={containerRef} className="relative bg-secondary-900 text-white selection:bg-primary-500/30">
-      
+
       {/* ── Massive Hero Section ── */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <motion.img 
+          <motion.img
             style={{ y: bgY }}
-            src="/assets/nano_exhibit_banner.png" 
-            alt="Exhibit at ISUC 2026" 
+            src="/assets/nano_exhibit_banner.png"
+            alt="Exhibit at ISUC 2026"
             className="absolute inset-0 w-full h-[120%] -top-[10%] object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-secondary-900/80 via-secondary-900/40 to-secondary-900" />
@@ -109,18 +109,18 @@ const ExhibitPage = () => {
         </div>
 
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary-500/20 border border-primary-400/40 text-primary-300 text-sm font-bold mb-10 backdrop-blur-md"
           >
             <Building2 className="w-4 h-4" />
             B2B EXHIBITOR OPPORTUNITY — SAUDI SUPPLIERS
           </motion.div>
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="text-5xl md:text-6xl font-display font-bold mb-8 leading-[1.1] tracking-tight"
           >
@@ -129,9 +129,9 @@ const ExhibitPage = () => {
               India's Umrah Trade
             </span>
           </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45 }}
             className="text-lg md:text-xl text-secondary-200 mb-10 max-w-3xl mx-auto leading-relaxed font-medium"
           >
@@ -139,9 +139,9 @@ const ExhibitPage = () => {
             Secure one of <span className="text-primary-400">40 exclusive tables</span> and meet India's top 300 buyers in focused, pre-scheduled sessions.
           </motion.p>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-5 justify-center"
           >
@@ -163,14 +163,14 @@ const ExhibitPage = () => {
         </motion.div>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
           <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center p-1">
-            <motion.div 
+            <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
               className="w-1.5 h-1.5 rounded-full bg-primary-400"
@@ -189,7 +189,7 @@ const ExhibitPage = () => {
               { stat: 3, suffix: '', label: 'Indian Cities', sub: 'Tier-1 Markets' },
               { stat: 80, suffix: '', label: 'Avg Meetings', sub: 'Per Exhibitor' },
             ].map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -214,7 +214,7 @@ const ExhibitPage = () => {
       <div id="details" className="py-32 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-20 items-center mb-32">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -227,7 +227,7 @@ const ExhibitPage = () => {
               <p className="text-lg text-secondary-400 mb-10 leading-relaxed">
                 Standard exhibitions rely on luck. ISUC 2026 relies on data. We match your hotel, DMC, or transport inventory with buyers specifically looking for your category.
               </p>
-              
+
               <div className="space-y-6">
                 {[
                   { title: "20-Minute Focused Slots", desc: "Every meeting is timed and pre-matched. No time wasted on 'just looking' visitors." },
@@ -247,16 +247,16 @@ const ExhibitPage = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="lg:w-1/2 relative group"
             >
               <div className="absolute -inset-4 bg-primary-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl" />
-              <img 
-                src="/assets/nano_b2b_meetings.png" 
-                alt="B2B Meetings" 
+              <img
+                src="/assets/nano_b2b_meetings.png"
+                alt="B2B Meetings"
                 className="relative z-10 rounded-3xl shadow-2xl border border-white/10 w-full object-cover aspect-video"
               />
               <div className="absolute -bottom-6 -right-6 z-20 bg-secondary-900 border border-white/10 p-6 rounded-2xl shadow-2xl hidden md:block">
@@ -282,9 +282,9 @@ const ExhibitPage = () => {
           {/* ── Gala Dinner Section ── */}
           <div className="relative rounded-[40px] overflow-hidden group">
             <div className="absolute inset-0 z-0">
-              <img 
-                src="/assets/nano_gala_dinner.png" 
-                alt="Networking Gala" 
+              <img
+                src="/assets/nano_gala_dinner.png"
+                alt="Networking Gala"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-secondary-900/80" />
@@ -341,7 +341,7 @@ const ExhibitPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {tourInclusions.map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -364,7 +364,7 @@ const ExhibitPage = () => {
       <div className="py-32">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -381,7 +381,7 @@ const ExhibitPage = () => {
                   "Visa & Pilgrim Service Companies",
                   "Saudi Tourism & Destination Boards"
                 ].map((item, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -397,7 +397,7 @@ const ExhibitPage = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -407,7 +407,7 @@ const ExhibitPage = () => {
               <p className="text-secondary-400 mb-10 leading-relaxed">
                 We maintain a strict quality balance. Applications are reviewed within 48 hours to ensure a balanced mix of products for our Indian buyers.
               </p>
-              
+
               <div className="space-y-8 relative">
                 <div className="absolute left-[27px] top-4 bottom-4 w-px bg-white/10" />
                 {[
@@ -444,7 +444,7 @@ const ExhibitPage = () => {
           >
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-500/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
-            
+
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8">
                 Ready to Meet <br />
@@ -453,7 +453,7 @@ const ExhibitPage = () => {
               <p className="text-xl text-primary-100 mb-12 max-w-2xl mx-auto font-medium">
                 Applications for ISUC 2026 are now open. Only 40 table slots are available for Saudi suppliers. Secure yours today.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
                 <a
                   href="https://zoho.com/exhibit"

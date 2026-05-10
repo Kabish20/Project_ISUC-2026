@@ -34,9 +34,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center gap-2 mb-6 group">
-              <img 
-                src={logo} 
-                alt="ISUC 2026" 
+              <img
+                src={logo}
+                alt="ISUC 2026"
                 className="h-28 w-auto object-contain transition-transform group-hover:scale-105"
               />
             </button>
