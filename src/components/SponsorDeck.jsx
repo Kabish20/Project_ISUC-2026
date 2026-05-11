@@ -149,7 +149,7 @@ const SponsorDeck = () => {
             className="flex flex-col sm:flex-row gap-5 justify-center"
           >
             <a 
-              href="mailto:info@9X EVENTS.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
+              href="mailto:info@travizly.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
               className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-primary-600 hover:bg-primary-500 text-white rounded-xl shadow-[0_0_40px_rgba(182,141,64,0.4)] transition-all duration-300 hover:-translate-y-1"
             >
               <Download className="w-5 h-5 fill-current" />
@@ -343,7 +343,7 @@ const SponsorDeck = () => {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a 
-                  href="mailto:info@9X EVENTS.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
+                  href="mailto:info@travizly.com?subject=Sponsorship%20Inquiry%20ISUC%202026"
                   className="px-12 py-6 bg-secondary-900 text-white font-bold text-xl rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl"
                 >
                   Download Partnership Deck

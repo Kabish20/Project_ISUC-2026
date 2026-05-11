@@ -36,9 +36,9 @@ const Header = () => {
           >
             <div className="container mx-auto px-4 flex justify-between items-center">
               <div className="flex gap-6">
-                <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-2 text-secondary-200 hover:text-secondary-50 transition-colors text-xs font-medium">
+                <a href="mailto:info@travizly.com" className="flex items-center gap-2 text-secondary-200 hover:text-secondary-50 transition-colors text-xs font-medium">
                   <Mail className="w-3.5 h-3.5 text-primary-600" />
-                  info@9X EVENTS.com
+                  info@travizly.com
                 </a>
                 <div className="flex gap-4 border-l border-white/10 pl-4">
                   <a href="tel:+918072896589" className="flex items-center gap-2 text-secondary-200 hover:text-secondary-50 transition-colors text-xs font-medium">
@@ -89,9 +89,9 @@ const Header = () => {
                     exit={{ opacity: 0, x: 20 }}
                     className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur-md"
                   >
-                    <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-2 text-secondary-300 hover:text-secondary-50 transition-colors group">
+                    <a href="mailto:info@travizly.com" className="flex items-center gap-2 text-secondary-300 hover:text-secondary-50 transition-colors group">
                       <Mail className="w-3.5 h-3.5 text-primary-600" />
-                      <span className="text-xs font-medium tracking-tight">info@9X EVENTS.com</span>
+                      <span className="text-xs font-medium tracking-tight">info@travizly.com</span>
                     </a>
                     <div className="w-px h-3 bg-white/10" />
                     <a href="tel:+918072896589" className="flex items-center gap-2 text-secondary-300 hover:text-secondary-50 transition-colors group">
@@ -145,8 +145,8 @@ const Header = () => {
               <div className="p-6 space-y-6">
 
                 <div className="pt-6 border-t border-white/10 space-y-4">
-                  <a href="mailto:info@9X EVENTS.com" className="flex items-center gap-3 text-secondary-100">
-                    <Mail className="w-5 h-5 text-primary-600" /> info@9X EVENTS.com
+                  <a href="mailto:info@travizly.com" className="flex items-center gap-3 text-secondary-100">
+                    <Mail className="w-5 h-5 text-primary-600" /> info@travizly.com
                   </a>
                   <a href="tel:+918072896589" className="flex items-center gap-3 text-secondary-100">
                     <Phone className="w-5 h-5 text-primary-700" /> IN: +91 80728 96589

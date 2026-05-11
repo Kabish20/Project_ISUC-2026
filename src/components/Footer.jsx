@@ -76,14 +76,14 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-6 font-display text-lg">Contact Us</h4>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:info@9X EVENTS.com"
+                <a href="mailto:info@travizly.com"
                   className="flex items-center gap-3 text-secondary-400 hover:text-white transition-colors group">
                   <div className="w-9 h-9 rounded-lg bg-secondary-800 flex items-center justify-center group-hover:bg-primary-600 transition-colors">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-xs text-secondary-500 mb-0.5">Enquiries &amp; Partnerships</div>
-                    <div className="text-sm font-medium">info@9X EVENTS.com</div>
+                    <div className="text-sm font-medium">info@travizly.com</div>
                   </div>
                 </a>
               </li>

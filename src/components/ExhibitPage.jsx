@@ -462,7 +462,7 @@ const ExhibitPage = () => {
                   Start My Application
                 </a>
                 <a
-                  href="mailto:info@9X EVENTS.com"
+                  href="mailto:info@travizly.com"
                   className="px-10 py-5 bg-primary-700/30 text-white font-bold text-lg rounded-2xl border border-white/30 backdrop-blur-md hover:bg-primary-700/50 transition-all duration-300"
                 >
                   Contact Organizer
