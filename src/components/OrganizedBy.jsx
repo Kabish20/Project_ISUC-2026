@@ -49,7 +49,7 @@ const OrganizedBy = () => {
   };
 
   return (
-    <section className="py-24 bg-secondary-900 relative overflow-hidden">
+    <section id="organizer" className="py-24 bg-secondary-900 relative overflow-hidden">
       {/* Subtle dot grid */}
       <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#b68d40_1px,transparent_1px)] [background-size:24px_24px]"></div>
       {/* Glow orbs */}

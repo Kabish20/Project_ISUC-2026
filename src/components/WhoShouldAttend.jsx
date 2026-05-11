@@ -19,7 +19,7 @@ const WhoShouldAttend = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary-900 text-white relative overflow-hidden">
+    <section id="attendees" className="py-24 bg-secondary-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <motion.img 
           initial={{ scale: 1.1, opacity: 0 }}
