@@ -186,7 +186,7 @@ const RegisterBuyer = () => {
               <div className="grid grid-cols-2 gap-4">
                 <MarketStat value="1.8M+" label="Total Pilgrims" sub="2025 Market Volume" />
                 <MarketStat value="70%" label="OTA's Share" sub="Controlled by Agents" />
-                <MarketStat value="40+" label="Top Saudi DMCs" sub="Confirmed Exhibitors" />
+                <MarketStat value="40+" label="Top Saudi DMCs" sub="Verified Suppliers" />
                 <MarketStat value="Zero" label="Cost to Buyer" sub="For Verified Agents" />
               </div>
             </motion.div>

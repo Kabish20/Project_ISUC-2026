@@ -77,7 +77,6 @@ const Hero = () => {
           >
             <a href="#exhibit" className="btn-primary flex-1 group">
               <span className="relative z-10 flex flex-col items-center">
-                <span className="text-sm font-normal text-primary-100 mb-1 group-hover:text-white transition-colors">I'm a Saudi Supplier</span>
                 <span className="flex items-center gap-2">Exhibit at ISUC-2026 <span className="group-hover:translate-x-1 transition-transform">→</span></span>
               </span>
             </a>
@@ -85,12 +84,6 @@ const Hero = () => {
               <span className="relative z-10 flex flex-col items-center">
                 <span className="text-sm font-normal text-secondary-300 mb-1 group-hover:text-white transition-colors">I'm an Indian Agent</span>
                 <span className="flex items-center gap-2 text-white">Register as Buyer <span className="group-hover:translate-x-1 transition-transform">→</span></span>
-              </span>
-            </a>
-            <a href="#sponsor-deck" className="btn-accent flex-1 group">
-              <span className="relative z-10 flex flex-col items-center">
-                <span className="text-sm font-normal text-secondary-900 mb-1 transition-colors">Become a Sponsor</span>
-                <span className="flex items-center gap-2">Get Sponsor Deck <span className="group-hover:translate-x-1 transition-transform">→</span></span>
               </span>
             </a>
           </motion.div>

@@ -84,12 +84,6 @@ const FinalCTA = () => {
                 href="#register-buyer" className="btn-secondary flex-1 border-0 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-shadow">
                 Indian Agents: Apply to Buy
               </motion.a>
-              <motion.a 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="#sponsor-deck" className="btn-accent flex-1 shadow-[0_0_20px_rgba(251,177,17,0.3)] hover:shadow-[0_0_40px_rgba(251,177,17,0.7)] transition-shadow">
-                Brands: Sponsor ISUC-2026
-              </motion.a>
             </div>
 
             <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white/10 backdrop-blur-md px-8 py-4 rounded-full border border-white/20">

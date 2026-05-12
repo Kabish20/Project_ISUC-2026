@@ -54,7 +54,7 @@ const WhyISUC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8 mb-16"
+          className="grid md:grid-cols-2 gap-8 mb-16"
         >
           {/* Card 1 */}
           <motion.div variants={itemVariants} className="bg-secondary-900 rounded-3xl p-8 group hover:-translate-y-3 transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl border border-white/10">
@@ -96,25 +96,7 @@ const WhyISUC = () => {
             </div>
           </motion.div>
 
-          {/* Card 3 */}
-          <motion.div variants={itemVariants} className="bg-secondary-900 rounded-3xl p-8 group hover:-translate-y-3 transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl border border-white/10">
-            <div className="absolute inset-0 z-0">
-              <img src="/assets/nano_why_sponsors.png" alt="For Sponsors" className="w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/90 to-secondary-900/60 transition-all duration-500 group-hover:from-secondary-900 group-hover:via-secondary-900/80 group-hover:to-secondary-900/50"></div>
-            </div>
-            <div className="relative z-10">
-              <div className="w-14 h-14 bg-primary-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary-600 transition-all duration-500 border border-primary-600/30 shadow-lg">
-                <Target className="w-7 h-7 text-primary-400 group-hover:text-white transition-colors" />
-              </div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4">For Sponsors</h3>
-              <p className="text-secondary-300 leading-relaxed mb-4 font-medium">
-                <strong className="text-primary-400">Own the conversation</strong> between Saudi & India's Umrah trade. Title Partner branding across 4 cities + 600+ targeted meetings.
-              </p>
-              <p className="font-bold text-secondary-900 bg-primary-700 p-3 rounded-lg shadow-sm">
-                This becomes your annual India pipeline.
-              </p>
-            </div>
-          </motion.div>
+
         </motion.div>
 
         <motion.div
@@ -133,29 +115,7 @@ const WhyISUC = () => {
           </a>
         </motion.div>
 
-        {/* Social Proof area (as requested by user) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-24 pt-12 border-t border-white/10"
-        >
-          <p className="text-center text-sm font-semibold text-secondary-400 uppercase tracking-wider mb-8">
-            Confirmed Exhibitors Include
-          </p>
-          <div className="flex justify-center items-center hover:opacity-100 transition-all duration-500 max-w-4xl mx-auto opacity-80">
-            <motion.img
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              src="/assets/logos_collage.png"
-              alt="Premium Partners and Exhibitors"
-              className="w-full h-auto rounded-2xl shadow-2xl border border-white/10"
-            />
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

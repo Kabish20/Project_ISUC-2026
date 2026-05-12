@@ -163,7 +163,6 @@ const Header = () => {
                     { id: 'attendees', label: 'Who Should Attend', icon: <Users className="w-5 h-5" /> },
                     { id: 'schedule', label: 'Tour Schedule', icon: <Calendar className="w-5 h-5" /> },
                     { id: 'venue', label: 'Premium Venues', icon: <MapPin className="w-5 h-5" /> },
-                    { id: 'sponsor-deck', label: 'Sponsorship', icon: <ShieldCheck className="w-5 h-5" /> },
                     { id: 'organizer', label: 'About Organizer', icon: <Building2 className="w-5 h-5" /> },
                   ].map((item, index) => (
                     <motion.button

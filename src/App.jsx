@@ -6,7 +6,6 @@ import HowItWorks from './components/HowItWorks';
 import WhoShouldAttend from './components/WhoShouldAttend';
 import ExhibitPage from './components/ExhibitPage';
 import RegisterBuyer from './components/RegisterBuyer';
-import SponsorDeck from './components/SponsorDeck';
 import TourSchedule from './components/TourSchedule';
 import Venue from './components/Venue';
 import OrganizedBy from './components/OrganizedBy';
@@ -29,7 +28,6 @@ function App() {
       <WhoShouldAttend />
       <ExhibitPage />
       <RegisterBuyer />
-      <SponsorDeck />
       <TourSchedule />
       <Venue />
       <OrganizedBy />

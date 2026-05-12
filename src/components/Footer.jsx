@@ -12,7 +12,6 @@ const Footer = () => {
   const quickLinks = [
     { label: 'Exhibit at ISUC 2026', id: 'exhibit' },       // → ExhibitPage.jsx
     { label: 'Register as Buyer', id: 'register-buyer' },    // → RegisterBuyer.jsx
-    { label: 'Get Sponsor Deck', id: 'sponsor-deck' },       // → SponsorDeck.jsx
     { label: 'Why ISUC', id: 'why' },                        // → WhyISUC.jsx
     { label: 'Event Format', id: 'format' },                 // → HowItWorks.jsx
     { label: 'Tour Schedule', id: 'schedule' },              // → TourSchedule.jsx
@@ -22,7 +21,6 @@ const Footer = () => {
   const ctaLinks = [
     { label: 'Saudi Suppliers → Exhibit', id: 'exhibit', color: 'text-primary-400 hover:text-primary-300' },
     { label: 'Indian Agents → Buy', id: 'register-buyer', color: 'text-accent-400 hover:text-accent-300' },
-    { label: 'Brands → Sponsor', id: 'sponsor-deck', color: 'text-primary-500 hover:text-primary-400' },
   ];
 
   return (
@@ -156,10 +154,6 @@ const Footer = () => {
             <button onClick={() => scrollTo('register-buyer')}
               className="text-secondary-600 hover:text-secondary-300 transition-colors">
               Buy
-            </button>
-            <button onClick={() => scrollTo('sponsor-deck')}
-              className="text-secondary-600 hover:text-secondary-300 transition-colors">
-              Sponsor
             </button>
             <span className="text-secondary-700 font-medium">#ISUC2026</span>
           </div>
