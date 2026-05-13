@@ -8,7 +8,7 @@ const TourSchedule = () => {
     { date: '04 July 2026', city: 'Delhi Event', desc: 'B2B Meetings, Morning & Evening Tea Sessions, Networking Dinner', image: '/assets/nano_delhi_banner.png' },
     { date: '05 July 2026', city: 'Delhi → Mumbai', desc: 'Domestic Flight, Hotel Check-In, Networking Dinner', image: '/assets/nano_mumbai_banner.png' },
     { date: '06 July 2026', city: 'Mumbai Event', desc: 'B2B Meetings, Evening Flight to Chennai, Hotel Check-In', image: '/assets/nano_mumbai_banner.png' },
-    { date: '07 July 2026', city: 'Chennai Event', desc: 'B2B Meetings, Networking Dinner', image: '/assets/nano_chennai_banner.png' },
+    { date: '07 July 2026', city: 'Chennai Event', desc: 'Hotel Check-In, B2B Meetings, Networking Dinner', image: '/assets/nano_chennai_banner.png' },
     { date: '08 July 2026', city: 'Departure', desc: 'Breakfast, Departure', image: '/assets/nano_chennai_banner.png' }
   ];
 
@@ -30,7 +30,7 @@ const TourSchedule = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-display font-bold text-secondary-50 mb-6"
           >
-            6 Days. 3 Markets. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800">Fully Managed.</span>
+            3 Cities. 6 Days. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800">One Powerful Platform.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

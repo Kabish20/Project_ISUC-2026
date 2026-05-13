@@ -26,7 +26,7 @@ const SponsorDeck = () => {
       popular: true,
       features: [
         'Presented by [Your Brand] across all materials',
-        '20-min Keynote Address in all 4 cities',
+        '20-min Keynote Address in all 3 cities',
         'Top-priority branded tables in all cities',
         'Logo on lanyards, delegate badges & backdrops',
         'Full page feature in the Buyer Handbook',
@@ -303,7 +303,7 @@ const SponsorDeck = () => {
                     <div className="text-xs text-secondary-500 uppercase font-black tracking-widest">Targeted Buyers</div>
                   </div>
                   <div className="bg-secondary-900 border border-white/5 p-8 rounded-[40px] shadow-2xl translate-x-8">
-                    <div className="text-4xl font-display font-bold text-white mb-2">4</div>
+                    <div className="text-4xl font-display font-bold text-white mb-2">3</div>
                     <div className="text-xs text-secondary-500 uppercase font-black tracking-widest">Major Hub Cities</div>
                   </div>
                 </div>

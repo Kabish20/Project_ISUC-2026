@@ -39,11 +39,11 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-primary-50 mb-6 font-medium max-w-3xl mx-auto">
-            The Only Structured B2B Gateway to India's 1.8M+ Umrah Market
+            Connecting Saudi suppliers with India’s Umrah market
           </p>
 
           <p className="text-base text-secondary-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            3 Cities. 6 Days. 150–300 Verified Buyers. Direct Table Meetings. Zero Wasted Time.
+            3 Cities. 6 Days. Countless Business Opportunities. One Powerful Platform.
           </p>
 
           {/* Date & Location Strip */}

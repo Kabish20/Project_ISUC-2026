@@ -7,7 +7,7 @@ const HowItWorks = () => {
     {
       icon: <LayoutDashboard className="w-8 h-8 text-primary-600" />,
       title: 'Dedicated Table',
-      description: 'Every Saudi supplier gets a branded table in all 4 cities. Your space. Your meetings.',
+      description: 'Every Saudi supplier gets a branded table in all 3 cities. Your space. Your meetings.',
       bg: 'bg-primary-50',
       border: 'border-primary-100',
       image: '/assets/nano_table_banner.png'

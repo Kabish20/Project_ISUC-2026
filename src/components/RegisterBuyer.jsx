@@ -165,12 +165,13 @@ const RegisterBuyer = () => {
       {/* ── Market Insights Section ── */}
       <div id="market-insights" className="py-24 relative bg-secondary-900 border-y border-white/5">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-20 items-center">
+          {/* Top Row: Text & Stats */}
+          <div className="flex flex-col lg:flex-row gap-16 items-center mb-16">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:w-1/2"
+              className="lg:w-2/3"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-500/10 border border-accent-500/20 text-accent-400 text-xs font-bold mb-6 tracking-widest uppercase">
                 Market Opportunity
@@ -179,41 +180,46 @@ const RegisterBuyer = () => {
                 India's 1.8M+ <br />
                 <span className="text-accent-400">Pilgrim Market.</span>
               </h2>
-              <p className="text-lg text-secondary-400 mb-10 leading-relaxed font-medium">
+              <p className="text-lg text-secondary-300 mb-0 leading-relaxed font-medium">
                 In 2025, India emerged as one of the fastest-growing Umrah markets. ISUC 2026 brings the sources of that growth directly to your doorstep. This is where high-volume agents find the inventory they need to dominate the season.
               </p>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <MarketStat value="1.8M+" label="Total Pilgrims" sub="2025 Market Volume" />
-                <MarketStat value="70%" label="OTA's Share" sub="Controlled by Agents" />
-                <MarketStat value="40+" label="Top Saudi DMCs" sub="Verified Suppliers" />
-                <MarketStat value="Zero" label="Cost to Buyer" sub="For Verified Agents" />
-              </div>
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:w-1/2 grid grid-cols-2 gap-5"
+              className="lg:w-1/3 grid grid-cols-2 gap-4"
             >
-              {[
-                { city: 'Delhi', date: '3–5 July 2026', img: '/assets/nano_delhi_banner.png' },
-                { city: 'Mumbai', date: '5–7 July 2026', img: '/assets/nano_mumbai_banner.png' },
-                { city: 'Hyderabad', date: '7–8 July 2026', img: '/assets/nano_hyd_banner.png' },
-                { city: 'Chennai', date: '8–9 July 2026', img: '/assets/nano_chennai_banner.png' },
-              ].map((c, i) => (
-                <div key={i} className="relative rounded-3xl overflow-hidden group aspect-square border border-white/10 hover:border-accent-500/40 transition-colors">
-                  <img src={c.img} alt={c.city} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <h4 className="text-xl font-bold text-white mb-0.5">{c.city}</h4>
-                    <p className="text-accent-400 text-xs font-bold uppercase tracking-widest">{c.date}</p>
-                  </div>
-                </div>
-              ))}
+              <MarketStat value="1.8M+" label="Total Pilgrims" sub="2025 Market Volume" />
+              <MarketStat value="70%" label="OTA's Share" sub="Controlled by Agents" />
+              <MarketStat value="40+" label="Top Saudi DMCs" sub="Verified Suppliers" />
+              <MarketStat value="Zero" label="Cost to Buyer" sub="For Verified Agents" />
             </motion.div>
           </div>
+
+          {/* Bottom Row: 3-City Grid */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+          >
+            {[
+              { city: 'Delhi', date: '3–4 July 2026', img: '/assets/nano_delhi_banner.png' },
+              { city: 'Mumbai', date: '5–6 July 2026', img: '/assets/nano_mumbai_banner.png' },
+              { city: 'Chennai', date: '7–8 July 2026', img: '/assets/nano_chennai_banner.png' },
+            ].map((c, i) => (
+              <div key={i} className="relative rounded-[32px] overflow-hidden group aspect-[4/3] border border-white/10 hover:border-accent-500/40 transition-all duration-500 shadow-xl">
+                <img src={c.img} alt={c.city} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                <div className="absolute bottom-6 left-6">
+                  <h4 className="text-2xl font-bold text-white mb-1">{c.city}</h4>
+                  <p className="text-accent-400 text-sm font-bold uppercase tracking-widest">{c.date}</p>
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
 
@@ -332,51 +338,7 @@ const RegisterBuyer = () => {
         </div>
       </div>
 
-      {/* ── Final CTA Section ── */}
-      <div id="apply-now" className="py-32 relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="max-w-5xl mx-auto p-10 md:p-16 rounded-[40px] bg-gradient-to-br from-accent-500 via-orange-600 to-accent-700 relative overflow-hidden group text-center"
-          >
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
-            
-            <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-secondary-900 mb-8 leading-tight">
-                Secure Your <br /> Season Inventory.
-              </h2>
-              <p className="text-xl text-secondary-900/80 mb-12 max-w-2xl mx-auto font-bold">
-                Verification takes 72 hours. Don't wait until the deadline. Apply now to secure your pre-matched meeting schedule with Saudi suppliers.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a
-                  href="https://zoho.com/buyer-reg"
-                  className="px-12 py-6 bg-secondary-900 text-white font-bold text-xl rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl"
-                >
-                  Apply as Verified Buyer
-                </a>
-                <div className="flex items-center gap-4">
-                  <div className="flex -space-x-4">
-                    {[1, 2, 3, 4].map(i => (
-                      <div key={i} className="w-10 h-10 rounded-full border-2 border-accent-600 bg-secondary-800 flex items-center justify-center overflow-hidden">
-                        <Users className="w-5 h-5 text-accent-500" />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="text-left">
-                    <div className="text-secondary-900 font-bold text-sm uppercase tracking-widest">Join 150+</div>
-                    <div className="text-secondary-900/60 text-xs font-bold uppercase tracking-widest">Verified Agents</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+
 
     </div>
   );
