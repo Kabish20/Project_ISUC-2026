@@ -1,7 +1,7 @@
 # ISUC-2026 Landing Page Content
 
 ## Page Title / Meta
-ISUC-2026 | Indo-Saudi Umrah Connect | 3-11 July 2026 | Delhi • Mumbai • Hyderabad • Chennai
+ISUC-2026 | Indo-Saudi Umrah Connect | 26-31 July 2026 | Mumbai • Chennai • Delhi
 
 ---
 
@@ -12,7 +12,7 @@ The only structured B2B gateway to India’s 1.8M+ Umrah market.
 
 4 Cities. 7 Days. 150-300 Verified Buyers. Direct Table Meetings. Zero Wasted Time.
 
-📅 3–11 July 2026 | 📍 Delhi • Mumbai • Hyderabad • Chennai
+📅 26–31 July 2026 | 📍 Mumbai • Chennai • Delhi
 
 Primary CTAs:
 - [I’m a Saudi Supplier → Exhibit at ISUC-2026](https://zoho.example/exhibit-registration?utm_source=website&utm_campaign=isuc2026&utm_content=exhibitor)
@@ -170,7 +170,7 @@ Only 40 exhibitor tables. 22 already reserved. Buyer verification closes 15 May 
 
 ISUC-2026
 Indo-Saudi Umrah Connect
-3–11 July 2026 | Delhi • Mumbai • Hyderabad • Chennai
+26–31 July 2026 | Mumbai • Chennai • Delhi
 
 Contact:
 partnerships@travizly.com | +966 XX XXX XXXX | +91 XX XXXX XXXX

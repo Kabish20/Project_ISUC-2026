@@ -40,8 +40,8 @@ const Footer = () => {
             </button>
             <p className="text-secondary-400 mb-6 leading-relaxed text-sm font-medium">
               Indo-Saudi Umrah Connect<br />
-              3–8 July 2026<br />
-              Delhi • Mumbai • Chennai
+              26–31 July 2026<br />
+              Mumbai • Chennai • Delhi
             </p>
 
             {/* CTA shortcuts */}
@@ -115,8 +115,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-xs text-secondary-500 mb-0.5">Tour Cities</div>
-                  <div className="text-sm font-medium">Delhi · Mumbai · Chennai</div>
-                  <div className="text-xs text-secondary-500 mt-0.5">3–8 July 2026</div>
+                  <div className="text-sm font-medium">Mumbai · Chennai · Delhi</div>
+                  <div className="text-xs text-secondary-500 mt-0.5">26–31 July 2026</div>
                 </div>
               </li>
             </ul>

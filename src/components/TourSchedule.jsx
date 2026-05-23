@@ -4,12 +4,12 @@ import { MapPin, Plane, Utensils, Hotel, Car, Info } from 'lucide-react';
 
 const TourSchedule = () => {
   const schedule = [
-    { date: '03 July 2026', city: 'Delhi', desc: 'Arrival, Hotel Check-In, Networking Dinner', image: '/assets/nano_delhi_banner.png' },
-    { date: '04 July 2026', city: 'Delhi Event', desc: 'B2B Meetings, Morning & Evening Tea Sessions, Networking Dinner', image: '/assets/nano_delhi_banner.png' },
-    { date: '05 July 2026', city: 'Delhi → Mumbai', desc: 'Domestic Flight, Hotel Check-In, Networking Dinner', image: '/assets/nano_mumbai_banner.png' },
-    { date: '06 July 2026', city: 'Mumbai Event', desc: 'B2B Meetings, Evening Flight to Chennai, Hotel Check-In', image: '/assets/nano_mumbai_banner.png' },
-    { date: '07 July 2026', city: 'Chennai Event', desc: 'Hotel Check-In, B2B Meetings, Networking Dinner', image: '/assets/nano_chennai_banner.png' },
-    { date: '08 July 2026', city: 'Departure', desc: 'Breakfast, Departure', image: '/assets/nano_chennai_banner.png' }
+    { date: '26 July 2026', city: 'Mumbai', desc: 'Arrival, Hotel Check-In, Networking Dinner', image: '/assets/nano_mumbai_banner.png' },
+    { date: '27 July 2026', city: 'Mumbai Event', desc: 'B2B Meetings (Main Event), Evening departure to Chennai', image: '/assets/nano_mumbai_banner.png' },
+    { date: '28 July 2026', city: 'Chennai Event', desc: 'B2B Meetings (Main Event), Overnight stay in Chennai', image: '/assets/nano_chennai_banner.png' },
+    { date: '29 July 2026', city: 'Chennai → Delhi', desc: 'Check out, departure to Delhi, Hotel Check-In', image: '/assets/nano_delhi_banner.png' },
+    { date: '30 July 2026', city: 'Delhi Event', desc: 'B2B Meetings (Main Event), Networking Dinner', image: '/assets/nano_delhi_banner.png' },
+    { date: '31 July 2026', city: 'Departure', desc: 'Breakfast, Departure from Delhi', image: '/assets/nano_delhi_banner.png' }
   ];
 
   const inclusions = [

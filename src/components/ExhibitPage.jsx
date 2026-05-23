@@ -52,7 +52,7 @@ const ExhibitPage = () => {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [1, 1, 0]);
 
   const tableFeatures = [
-    { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: 'Branded Table in All 3 Cities', desc: 'Your dedicated premium exhibition space across Delhi, Mumbai & Chennai — fully set up and managed.' },
+    { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: 'Branded Table in All 3 Cities', desc: 'Your dedicated premium exhibition space across Mumbai, Chennai & Delhi — fully set up and managed.' },
     { icon: <Users className="w-6 h-6 text-accent-400" />, title: '60–80 Pre-Matched Buyer Meetings', desc: 'Guaranteed face-to-face sessions with verified Indian operators matched to your hotel category, group size & regions.' },
     { icon: <Shield className="w-6 h-6 text-primary-400" />, title: 'Zero Cold Outreach Needed', desc: 'We screen, qualify and schedule all buyer meetings. You arrive ready to close deals.' },
     { icon: <Globe className="w-6 h-6 text-primary-400" />, title: 'Access to 1.8M+ Pilgrim Market', desc: "India's Umrah market sent 1.8M pilgrims in 2025. 70% of volume controlled by the buyers you'll meet here." },
@@ -231,7 +231,7 @@ const ExhibitPage = () => {
               <div className="space-y-6">
                 {[
                   { title: "20-Minute Focused Slots", desc: "Every meeting is timed and pre-matched. No time wasted on 'just looking' visitors." },
-                  { title: "Branded Premium Table", desc: "Fully set up across luxury hotels in Delhi, Mumbai, and Chennai." },
+                  { title: "Branded Premium Table", desc: "Fully set up across luxury hotels in Mumbai, Chennai, and Delhi." },
                   { title: "Direct MoU Signing", desc: "Exclusive gala dinners designed for concluding business and signing partnerships." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 group">
@@ -335,7 +335,7 @@ const ExhibitPage = () => {
               A 6-Day <span className="text-primary-400">Seamless Tour.</span>
             </h2>
             <p className="text-secondary-400 text-lg">
-              One package, zero logistics. From the moment you land in Delhi until you fly out from Chennai, we handle every detail of your stay, travel, and meetings.
+              One package, zero logistics. From the moment you land in Mumbai until you fly out from Delhi, we handle every detail of your stay, travel, and meetings.
             </p>
           </div>
 

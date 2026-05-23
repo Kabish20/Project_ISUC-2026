@@ -57,14 +57,14 @@ const Hero = () => {
               <div className="w-10 h-10 rounded-full bg-primary-500/20 flex items-center justify-center">
                 <Globe className="w-5 h-5 text-primary-400" />
               </div>
-              <span className="text-lg font-semibold tracking-wide">3–8 July 2026</span>
+              <span className="text-lg font-semibold tracking-wide">26–31 July 2026</span>
             </div>
             <div className="hidden md:block w-px h-10 bg-white/20"></div>
             <div className="flex items-center gap-3 text-white">
               <div className="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-accent-500" />
               </div>
-              <span className="text-lg font-semibold tracking-wide">Delhi • Mumbai • Chennai</span>
+              <span className="text-lg font-semibold tracking-wide">Mumbai • Chennai • Delhi</span>
             </div>
           </motion.div>
 

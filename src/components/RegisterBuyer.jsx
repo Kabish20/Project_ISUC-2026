@@ -151,14 +151,6 @@ const RegisterBuyer = () => {
             </a>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
-            className="mt-12 inline-flex items-center gap-3 bg-red-500/10 border border-red-500/30 px-6 py-3 rounded-full backdrop-blur-sm"
-          >
-            <Lock className="w-4 h-4 text-red-400" />
-            <span className="text-red-200 text-sm font-medium">
-              <strong className="text-white">Verification Deadline: 15 May 2026.</strong> Slots are filling fast in Delhi & Mumbai.
-            </span>
-          </motion.div>
         </div>
       </div>
 
@@ -206,9 +198,9 @@ const RegisterBuyer = () => {
             className="grid grid-cols-1 sm:grid-cols-3 gap-6"
           >
             {[
-              { city: 'Delhi', date: '3–4 July 2026', img: '/assets/nano_delhi_banner.png' },
-              { city: 'Mumbai', date: '5–6 July 2026', img: '/assets/nano_mumbai_banner.png' },
-              { city: 'Chennai', date: '7–8 July 2026', img: '/assets/nano_chennai_banner.png' },
+              { city: 'Mumbai', date: '26–27 July 2026', img: '/assets/nano_mumbai_banner.png' },
+              { city: 'Chennai', date: '28 July 2026', img: '/assets/nano_chennai_banner.png' },
+              { city: 'Delhi', date: '29–30 July 2026', img: '/assets/nano_delhi_banner.png' },
             ].map((c, i) => (
               <div key={i} className="relative rounded-[32px] overflow-hidden group aspect-[4/3] border border-white/10 hover:border-accent-500/40 transition-all duration-500 shadow-xl">
                 <img src={c.img} alt={c.city} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
