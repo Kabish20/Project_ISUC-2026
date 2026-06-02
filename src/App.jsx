@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import WhyISUC from './components/WhyISUC';
+import ShowcaseLogo from './components/ShowcaseLogo';
 import HowItWorks from './components/HowItWorks';
 import WhoShouldAttend from './components/WhoShouldAttend';
 import ExhibitPage from './components/ExhibitPage';
@@ -24,6 +25,7 @@ function App() {
       <Header />
       <Hero />
       <WhyISUC />
+      <ShowcaseLogo />
       <HowItWorks />
       <WhoShouldAttend />
       <ExhibitPage />
