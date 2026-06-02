@@ -106,7 +106,7 @@ const WhyISUC = () => {
           className="text-center"
         >
           <a
-            href="/pdf/ISUC BROCHURE.pdf"
+            href="/pdf/ISUC2026%20BROCHURE%209X.pdf"
             download="ISUC-2026-Overview.pdf"
             className="inline-flex items-center gap-2 px-8 py-4 bg-secondary-800 hover:bg-secondary-700 border border-secondary-700 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
           >
