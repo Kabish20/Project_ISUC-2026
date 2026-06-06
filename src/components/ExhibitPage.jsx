@@ -50,6 +50,7 @@ const ExhibitPage = () => {
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start end', 'end start'] });
   const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [1, 1, 0]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const tableFeatures = [
     { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: 'Branded Table in All 3 Cities', desc: 'Your dedicated premium exhibition space across Mumbai, Chennai & Delhi — fully set up and managed.' },
@@ -146,7 +147,7 @@ const ExhibitPage = () => {
             className="flex flex-col sm:flex-row gap-5 justify-center"
           >
             <button
-              onClick={() => document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => setIsModalOpen(true)}
               className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-primary-600 hover:bg-primary-500 text-white rounded-xl shadow-[0_0_40px_rgba(182,141,64,0.4)] transition-all duration-300 hover:-translate-y-1"
             >
               <Zap className="w-5 h-5 fill-current" />
@@ -455,12 +456,12 @@ const ExhibitPage = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
-                <a
-                  href="https://zoho.com/exhibit"
+                <button
+                  onClick={() => setIsModalOpen(true)}
                   className="px-10 py-5 bg-white text-primary-700 font-bold text-lg rounded-2xl hover:bg-primary-50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 >
                   Start My Application
-                </a>
+                </button>
                 <a
                   href="mailto:info@travizly.com"
                   className="px-10 py-5 bg-primary-700/30 text-white font-bold text-lg rounded-2xl border border-white/30 backdrop-blur-md hover:bg-primary-700/50 transition-all duration-300"
@@ -478,7 +479,198 @@ const ExhibitPage = () => {
         </div>
       </div>
 
+      <ExhibitFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
+  );
+};
+
+const ExhibitFormModal = ({ isOpen, onClose }) => {
+  const [iframeHeight, setIframeHeight] = useState('500px');
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    document.body.style.overflow = 'hidden';
+
+    const handleMessage = (event) => {
+      const evntData = event.data;
+      if (evntData && typeof evntData === 'string') {
+        const zf_ifrm_data = evntData.split("|");
+        if (zf_ifrm_data.length === 2 || zf_ifrm_data.length === 3) {
+          const zf_perma = zf_ifrm_data[0];
+          const zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
+          
+          if (zf_perma === 'Jp9Ce_FP2xvmT8mN_kItNw0_Ev1BJcIMIsJi4sE6WKo') {
+            setIframeHeight(zf_ifrm_ht_nw);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage, false);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('message', handleMessage);
+    };
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
+  return (
+    <>
+      <style>{`
+        .zf_lB_Dimmer_168832{ 
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: rgb(0, 0, 0);
+            opacity: 0.8;
+            z-index: 10000000;
+        }
+
+        .zf_lB_Container_168832{
+            position: fixed;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            width: 70%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+            max-height: calc(100% - 60px);
+            z-index: 10000001;
+            transition: height 0.5s ease;
+            outline : none;
+            border-radius: 12px;
+        }
+
+        .zf_lB_Wrapper_168832{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: 0;
+            margin-top: -180px;
+            z-index: 10000002;
+        }
+
+        .zf_main_id_168832{
+            height: 100%;
+            display: flex;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border-radius: 12px;
+        }
+
+        .zf_lb_closeform_168832 {
+            position: absolute;
+            right: -20px;
+            background: #2f2e2e;
+            padding: 0;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            top: -15px;
+            cursor: pointer;
+            border: 2px solid #d9d9d9;
+            z-index: 10000003;
+        }
+        .zf_lb_closeform_168832:before, .zf_lb_closeform_168832:after {
+            position: absolute;
+            left: 14px;
+            content: ' ';
+            height: 19px;
+            width: 2px;
+            top: 5px;
+            background-color: #f7f7f7;
+        }
+
+        .zf_lb_closeform_168832:before {
+          transform: rotate(45deg);
+        }
+        .zf_lb_closeform_168832:after {
+          transform: rotate(-45deg);
+        } 
+
+        @media screen and (min-device-width: 10px) and (max-device-width: 380px) {  
+           .zf_lB_Container_168832 {
+              width: 290px !important;
+            } 
+        }
+
+        @media screen and (min-device-width: 360px) and (max-device-width: 480px) {  
+           .zf_lB_Container_168832 {
+              width: 340px !important;
+            } 
+        }
+
+        @media screen and (min-device-width: 440px) and (max-device-width: 500px) {  
+           .zf_lB_Container_168832 {
+              width: 380px !important;
+            } 
+        }
+
+        @media only screen and (min-width:500px) and (max-width:600px)  {  
+            .zf_lB_Container_168832 {
+              width: 450px;
+            }
+        }
+
+        @media only screen and (min-width:601px) and (max-width:700px)  {  
+            .zf_lB_Container_168832 {
+              width: 540px;
+            }
+        }
+
+        @media only screen and (min-width:700px) and (max-width:800px)  { 
+            .zf_lB_Container_168832 {
+              width: 650px;
+            }
+        }
+
+        @media screen and (min-device-width: 801px) and (max-device-width: 1268px) {  
+           .zf_lB_Container_168832 {
+              width: 750px !important;
+            } 
+        }
+      `}</style>
+      
+      {/* Dimmer backdrop */}
+      <div className="zf_lB_Dimmer_168832" onClick={onClose} />
+      
+      {/* Lightbox container */}
+      <div 
+        id="containerDiv_168832" 
+        className="zf_lB_Container_168832" 
+        style={{ height: iframeHeight }}
+      >
+        <div 
+          id="Jp9Ce_FP2xvmT8mN_kItNw0_Ev1BJcIMIsJi4sE6WKo_168832" 
+          className="zf_main_id_168832"
+        >
+          <iframe
+            src="https://forms.zohopublic.in/9xevents1/form/IndoSaudiUmrahConnect2026StallBookingForm/formperma/Jp9Ce_FP2xvmT8mN_kItNw0_Ev1BJcIMIsJi4sE6WKo?zf_rszfm=1"
+            style={{ border: 'none', minWidth: '100%', overflow: 'hidden', height: '100%' }}
+            title="Exhibitor Stall Booking Form"
+          />
+        </div>
+        <div 
+          id="deleteform_168832" 
+          className="zf_lb_closeform_168832" 
+          onClick={onClose}
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              onClose();
+            }
+          }}
+        />
+      </div>
+    </>
   );
 };
 
