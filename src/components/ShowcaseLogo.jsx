@@ -2,14 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Award, Users } from 'lucide-react';
 
+const processedLogosCache = new Map();
+
 const LogoImage = ({ src, alt, className, scale = 1.1 }) => {
   const [processedSrc, setProcessedSrc] = useState(src);
 
   useEffect(() => {
+    if (processedLogosCache.has(src)) {
+      setProcessedSrc(processedLogosCache.get(src));
+      return;
+    }
+
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
       if (!ctx) return;
 
       canvas.width = img.width;
@@ -30,20 +37,16 @@ const LogoImage = ({ src, alt, className, scale = 1.1 }) => {
 
         if (!isAlreadyWhite) {
           // Threshold of 120 to completely clear gradients on Mishkat
-          const threshold = 120;
+          const thresholdSq = 120 * 120;
 
           for (let i = 0; i < data.length; i += 4) {
             const r = data[i];
             const g = data[i + 1];
             const b = data[i + 2];
 
-            const dist = Math.sqrt(
-              Math.pow(r - refR, 2) +
-              Math.pow(g - refG, 2) +
-              Math.pow(b - refB, 2)
-            );
+            const distSq = (r - refR) * (r - refR) + (g - refG) * (g - refG) + (b - refB) * (b - refB);
 
-            if (dist < threshold) {
+            if (distSq < thresholdSq) {
               // Replace background with pure white
               data[i] = 255;
               data[i + 1] = 255;
@@ -51,7 +54,11 @@ const LogoImage = ({ src, alt, className, scale = 1.1 }) => {
             }
           }
           ctx.putImageData(imageData, 0, 0);
-          setProcessedSrc(canvas.toDataURL());
+          const processedUrl = canvas.toDataURL();
+          processedLogosCache.set(src, processedUrl);
+          setProcessedSrc(processedUrl);
+        } else {
+          processedLogosCache.set(src, src);
         }
       } catch (err) {
         console.error("Error clearing background for " + src, err);

@@ -57,9 +57,9 @@ const WhyISUC = () => {
           className="grid md:grid-cols-2 gap-8 mb-16"
         >
           {/* Card 1 */}
-          <motion.div variants={itemVariants} className="bg-secondary-900 rounded-3xl p-8 group hover:-translate-y-3 transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl border border-white/10">
+          <motion.div variants={itemVariants} className="bg-secondary-900 rounded-3xl p-8 group hover:-translate-y-3 transition-[transform,box-shadow] duration-500 will-change-transform relative overflow-hidden shadow-xl hover:shadow-2xl border border-white/10">
             <div className="absolute inset-0 z-0">
-              <img src="/assets/nano_why_suppliers.png" alt="Saudi Suppliers" className="w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700" />
+              <img src="/assets/nano_why_suppliers.png" alt="Saudi Suppliers" className="w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-110 transition-transform duration-700 will-change-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/90 to-secondary-900/60 transition-all duration-500 group-hover:from-secondary-900 group-hover:via-secondary-900/80 group-hover:to-secondary-900/50"></div>
             </div>
             <div className="relative z-10">
@@ -75,11 +75,11 @@ const WhyISUC = () => {
               </p>
             </div>
           </motion.div>
-
+ 
           {/* Card 2 */}
-          <motion.div variants={itemVariants} className="bg-secondary-900 rounded-3xl p-8 group hover:-translate-y-3 transition-all duration-500 relative overflow-hidden shadow-xl hover:shadow-2xl border border-white/10">
+          <motion.div variants={itemVariants} className="bg-secondary-900 rounded-3xl p-8 group hover:-translate-y-3 transition-[transform,box-shadow] duration-500 will-change-transform relative overflow-hidden shadow-xl hover:shadow-2xl border border-white/10">
             <div className="absolute inset-0 z-0">
-              <img src="/assets/nano_why_buyers.png" alt="Indian Buyers" className="w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700" />
+              <img src="/assets/nano_why_buyers.png" alt="Indian Buyers" className="w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-110 transition-transform duration-700 will-change-transform" />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-secondary-900/90 to-secondary-900/60 transition-all duration-500 group-hover:from-secondary-900 group-hover:via-secondary-900/80 group-hover:to-secondary-900/50"></div>
             </div>
             <div className="relative z-10">

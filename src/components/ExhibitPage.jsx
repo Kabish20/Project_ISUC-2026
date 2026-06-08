@@ -75,7 +75,7 @@ const ExhibitPage = () => {
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <motion.img
-            style={{ y: bgY }}
+            style={{ y: bgY, willChange: 'transform' }}
             src="/assets/nano_exhibit_banner.png"
             alt="Exhibit at ISUC 2026"
             className="absolute inset-0 w-full h-[120%] -top-[10%] object-cover opacity-60"
@@ -95,6 +95,7 @@ const ExhibitPage = () => {
                 height: 400 + i * 200,
                 left: `${15 + i * 25}%`,
                 top: `${20 + i * 15}%`,
+                willChange: 'transform'
               }}
               animate={{
                 x: [0, 50, 0],
