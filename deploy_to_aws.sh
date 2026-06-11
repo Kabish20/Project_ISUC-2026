@@ -58,7 +58,7 @@ if ! sudo grep -q "ssl_certificate" $CONF_FILE 2>/dev/null; then
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
-    server_name isuc2026.com www.isuc2026.com 52.65.150.105;
+    server_name isuc2026.com www.isuc2026.com 54.81.193.26;
 
     root $REPO_DIR/dist;
     index index.html;
@@ -81,5 +81,5 @@ sudo systemctl restart nginx
 
 echo "------------------------------------------------"
 echo "Deployment Successful!"
-echo "Project is live at http://52.65.150.105"
+echo "Project is live at http://54.81.193.26"
 echo "------------------------------------------------"
