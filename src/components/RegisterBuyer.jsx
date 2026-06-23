@@ -54,6 +54,7 @@ const RegisterBuyer = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start end', 'end start'] });
   const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   const benefits = [
     { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: '40+ Saudi Suppliers in Your City', desc: 'Meet top-tier DMCs, 5-star hotels from Makkah & Madinah, and transport giants directly in your own city.', color: 'bg-primary-500', delay: 0.1 },
@@ -135,14 +136,14 @@ const RegisterBuyer = () => {
             transition={{ delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-5 justify-center"
           >
-            <a 
-              href="#apply-now"
+            <button 
+              onClick={() => setIsModalOpen(true)}
               className="group inline-flex items-center gap-3 px-8 py-4 text-base font-bold bg-primary-600 hover:bg-primary-500 text-white rounded-xl shadow-[0_0_40px_rgba(182,141,64,0.4)] transition-all duration-300 hover:-translate-y-1"
             >
               <Zap className="w-5 h-5 fill-current" />
               Apply as Verified Buyer
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
             <a 
               href="#market-insights"
               className="inline-flex items-center gap-3 px-8 py-4 text-base font-semibold text-white border border-white/20 rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
@@ -330,9 +331,291 @@ const RegisterBuyer = () => {
         </div>
       </div>
 
+      {/* ── Final CTA Section ── */}
+      <div className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-accent-500/5 mix-blend-overlay" />
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto p-10 md:p-14 rounded-[32px] bg-gradient-to-br from-secondary-900 to-secondary-900 border border-accent-500/20 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-96 h-96 bg-accent-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent-500/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
 
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8">
+                Ready to Secure <br />
+                Your Direct Saudi Contracts?
+              </h2>
+              <p className="text-xl text-accent-100 mb-12 max-w-2xl mx-auto font-medium">
+                Applications for verified buyers are completely free but limited by city quotas. Apply now to secure your invitation.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="px-10 py-5 bg-white text-secondary-900 font-bold text-lg rounded-2xl hover:bg-secondary-50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                >
+                  Apply as Verified Buyer
+                </button>
+                <a
+                  href="mailto:info@travizly.com"
+                  className="px-10 py-5 bg-accent-700/30 text-white font-bold text-lg rounded-2xl border border-white/30 backdrop-blur-md hover:bg-accent-700/50 transition-all duration-300"
+                >
+                  Contact Organizer
+                </a>
+              </div>
+
+              <div className="flex items-center justify-center gap-6 text-accent-100/70 text-sm font-bold tracking-widest uppercase">
+                <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> Limited Seats</span>
+                <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4" /> Verified B2B Only</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      <BuyerFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
     </div>
+  );
+};
+
+const BuyerFormModal = ({ isOpen, onClose }) => {
+  const [iframeHeight, setIframeHeight] = useState('500px');
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    document.body.style.overflow = 'hidden';
+
+    const handleMessage = (event) => {
+      const evntData = event.data;
+      if (evntData && typeof evntData === 'string') {
+        const zf_ifrm_data = evntData.split("|");
+        if (zf_ifrm_data.length === 2 || zf_ifrm_data.length === 3) {
+          const zf_perma = zf_ifrm_data[0];
+          const zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
+          
+          if (zf_perma === '5h0bIxK0Wj3PqZ3VFNxPE96ZemcNE-YRJTsdt4Jb2wI') {
+            setIframeHeight(zf_ifrm_ht_nw);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage, false);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('message', handleMessage);
+    };
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
+  const getIframeSrc = () => {
+    let src = 'https://forms.zohopublic.in/9xevents1/form/BUYERREGISTRATIONFORM/formperma/5h0bIxK0Wj3PqZ3VFNxPE96ZemcNE-YRJTsdt4Jb2wI?zf_rszfm=1';
+    try {
+      if (typeof window.ZFAdvLead !== "undefined" && typeof window.zfutm_zfAdvLead !== "undefined") {
+        for (let prmIdx = 0; prmIdx < window.ZFAdvLead.utmPNameArr.length; prmIdx++) {
+          const utmPm = window.ZFAdvLead.utmPNameArr[prmIdx];
+          const utmVal = window.zfutm_zfAdvLead.zfautm_gC_enc(window.ZFAdvLead.utmPNameArr[prmIdx]);
+          if (typeof utmVal !== "undefined" && utmVal !== "") {
+            src += `&${utmPm}=${utmVal}`;
+          }
+        }
+      }
+
+      if (typeof window.ZFLead !== "undefined" && typeof window.zfutm_zfLead !== "undefined") {
+        for (let prmIdx = 0; prmIdx < window.ZFLead.utmPNameArr.length; prmIdx++) {
+          const utmPm = window.ZFLead.utmPNameArr[prmIdx];
+          const utmVal = window.zfutm_zfLead.zfutm_gC_enc(window.ZFLead.utmPNameArr[prmIdx]);
+          if (typeof utmVal !== "undefined" && utmVal !== "") {
+            src += `&${utmPm}=${utmVal}`;
+          }
+        }
+      }
+
+      if (!(/[?&]referrername=/).test(src)) {
+        let rfr = window.location.href;
+        try {
+          rfr = window.self !== window.top ? window.top.location.href : (window.location.href.startsWith('http') ? window.location.href : "");
+        } catch (e) {}
+
+        if (rfr && rfr !== "") {
+          if (rfr.length > 1800) {
+            const queryIndex = rfr.indexOf('?');
+            if (queryIndex > -1) {
+              rfr = rfr.substring(0, queryIndex);
+            }
+            if (rfr.length > 1800) {
+              rfr = rfr.substring(0, 1800);
+            }
+          }
+          src += `&referrername=${encodeURIComponent(rfr)}`;
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+    return src;
+  };
+
+  return (
+    <>
+      <style>{`
+        .zf_lB_Dimmer_828647{ 
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: rgb(0, 0, 0);
+            opacity: 0.8;
+            z-index: 10000000;
+        }
+
+        .zf_lB_Container_828647{
+            position: fixed;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            width: 70%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+            max-height: calc(100% - 60px);
+            z-index: 10000001;
+            transition: height 0.5s ease;
+            outline : none;
+            border-radius: 12px;
+        }
+
+        .zf_lB_Wrapper_828647{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: 0;
+            margin-top: -180px;
+            z-index: 10000002;
+        }
+
+        .zf_main_id_828647{
+            height: 100%;
+            display: flex;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border-radius: 12px;
+        }
+
+        .zf_lb_closeform_828647 {
+            position: absolute;
+            right: -20px;
+            background: #2f2e2e;
+            padding: 0;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            top: -15px;
+            cursor: pointer;
+            border: 2px solid #d9d9d9;
+            z-index: 10000003;
+        }
+        .zf_lb_closeform_828647:before, .zf_lb_closeform_828647:after {
+            position: absolute;
+            left: 14px;
+            content: ' ';
+            height: 19px;
+            width: 2px;
+            top: 5px;
+            background-color: #f7f7f7;
+        }
+
+        .zf_lb_closeform_828647:before {
+          transform: rotate(45deg);
+        }
+        .zf_lb_closeform_828647:after {
+          transform: rotate(-45deg);
+        } 
+
+        @media screen and (min-device-width: 10px) and (max-device-width: 380px) {  
+           .zf_lB_Container_828647 {
+              width: 290px !important;
+            } 
+        }
+
+        @media screen and (min-device-width: 360px) and (max-device-width: 480px) {  
+           .zf_lB_Container_828647 {
+              width: 340px !important;
+            } 
+        }
+
+        @media screen and (min-device-width: 440px) and (max-device-width: 500px) {  
+           .zf_lB_Container_828647 {
+              width: 380px !important;
+            } 
+        }
+
+        @media only screen and (min-width:500px) and (max-width:600px)  {  
+            .zf_lB_Container_828647 {
+              width: 450px;
+            }
+        }
+
+        @media only screen and (min-width:601px) and (max-width:700px)  {  
+            .zf_lB_Container_828647 {
+              width: 540px;
+            }
+        }
+
+        @media only screen and (min-width:700px) and (max-width:800px)  { 
+            .zf_lB_Container_828647 {
+              width: 650px;
+            }
+        }
+
+        @media screen and (min-device-width: 801px) and (max-device-width: 1268px) {  
+           .zf_lB_Container_828647 {
+              width: 750px !important;
+            } 
+        }
+      `}</style>
+      
+      <div className="zf_lB_Dimmer_828647" onClick={onClose} />
+      
+      <div 
+        id="containerDiv_828647" 
+        className="zf_lB_Container_828647" 
+        style={{ height: iframeHeight }}
+      >
+        <div 
+          id="5h0bIxK0Wj3PqZ3VFNxPE96ZemcNE-YRJTsdt4Jb2wI_828647" 
+          className="zf_main_id_828647"
+        >
+          <iframe
+            src={getIframeSrc()}
+            style={{ border: 'none', minWidth: '100%', overflow: 'hidden', height: '100%' }}
+            title="Buyer Registration Form"
+          />
+        </div>
+        <div 
+          id="deleteform_828647" 
+          className="zf_lb_closeform_828647" 
+          onClick={onClose}
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              onClose();
+            }
+          }}
+        />
+      </div>
+    </>
   );
 };
 
