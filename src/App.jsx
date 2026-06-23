@@ -15,6 +15,8 @@ import Footer from './components/Footer';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isExhibitModalOpen, setIsExhibitModalOpen] = useState(false);
+  const [isBuyerModalOpen, setIsBuyerModalOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -22,18 +24,18 @@ function App() {
 
   return (
     <div className={`min-h-screen bg-secondary-900 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <Header />
-      <Hero />
+      <Header onOpenExhibit={() => setIsExhibitModalOpen(true)} onOpenBuyer={() => setIsBuyerModalOpen(true)} />
+      <Hero onOpenExhibit={() => setIsExhibitModalOpen(true)} onOpenBuyer={() => setIsBuyerModalOpen(true)} />
       <WhyISUC />
       <ShowcaseLogo />
       <HowItWorks />
       <WhoShouldAttend />
-      <ExhibitPage />
-      <RegisterBuyer />
+      <ExhibitPage isModalOpen={isExhibitModalOpen} setIsModalOpen={setIsExhibitModalOpen} />
+      <RegisterBuyer isModalOpen={isBuyerModalOpen} setIsModalOpen={setIsBuyerModalOpen} />
       <TourSchedule />
       <Venue />
       <OrganizedBy />
-      <FinalCTA />
+      <FinalCTA onOpenExhibit={() => setIsExhibitModalOpen(true)} onOpenBuyer={() => setIsBuyerModalOpen(true)} />
       <Footer />
     </div>
   );

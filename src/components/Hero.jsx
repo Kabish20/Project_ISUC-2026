@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Calendar, CheckCircle2, Globe } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ onOpenExhibit, onOpenBuyer }) => {
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center pt-20 overflow-hidden bg-secondary-900">
       {/* Background Image with Overlay */}
@@ -75,17 +75,17 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="flex flex-col md:flex-row gap-4 justify-center items-stretch max-w-4xl mx-auto mb-12"
           >
-            <a href="#exhibit" className="btn-primary flex-1 group">
-              <span className="relative z-10 flex flex-col items-center">
-                <span className="flex items-center gap-2">Exhibit at ISUC-2026 <span className="group-hover:translate-x-1 transition-transform">→</span></span>
+            <button onClick={onOpenExhibit} className="btn-primary flex-1 group text-center flex items-center justify-center">
+              <span className="relative z-10 flex flex-col items-center w-full">
+                <span className="flex items-center justify-center gap-2">Exhibit at ISUC-2026 <span className="group-hover:translate-x-1 transition-transform">→</span></span>
               </span>
-            </a>
-            <a href="#register-buyer" className="btn-secondary flex-1 group">
-              <span className="relative z-10 flex flex-col items-center">
+            </button>
+            <button onClick={onOpenBuyer} className="btn-secondary flex-1 group text-center flex items-center justify-center">
+              <span className="relative z-10 flex flex-col items-center w-full">
                 <span className="text-sm font-normal text-secondary-300 mb-1 group-hover:text-white transition-colors">I'm an Indian Agent</span>
-                <span className="flex items-center gap-2 text-white">Register as Buyer <span className="group-hover:translate-x-1 transition-transform">→</span></span>
+                <span className="flex items-center justify-center gap-2 text-white">Register as Buyer <span className="group-hover:translate-x-1 transition-transform">→</span></span>
               </span>
-            </a>
+            </button>
           </motion.div>
 
           {/* Trust Bar */}

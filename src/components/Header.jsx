@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, Menu, X, ArrowRight, ShieldCheck, Globe, Calendar, Zap, Users, Building2, MapPin } from 'lucide-react';
 import logo from '../assets/logo.png';
 
-const Header = () => {
+const Header = ({ onOpenExhibit, onOpenBuyer }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -14,6 +14,17 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -109,13 +120,13 @@ const Header = () => {
 
               <div className="flex items-center gap-3">
                 <button
-                  onClick={() => scrollToSection('exhibit')}
+                  onClick={onOpenExhibit}
                   className="px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-secondary-900 font-bold text-sm transition-all hover:-translate-y-0.5 shadow-lg shadow-primary-500/20"
                 >
                   Exhibit at ISUC
                 </button>
                 <button
-                  onClick={() => scrollToSection('register-buyer')}
+                  onClick={onOpenBuyer}
                   className="px-6 py-3 rounded-xl bg-accent-500 hover:bg-accent-400 text-secondary-900 font-bold text-sm transition-all hover:-translate-y-0.5 shadow-lg shadow-accent-500/20"
                 >
                   Register as Buyer
@@ -215,14 +226,14 @@ const Header = () => {
               {/* Action Footer */}
               <div className="p-6 bg-secondary-900 border-t border-white/5 grid grid-cols-1 gap-3">
                 <button
-                  onClick={() => scrollToSection('exhibit')}
+                  onClick={() => { setMobileMenuOpen(false); onOpenExhibit(); }}
                   className="w-full py-4 bg-primary-600 hover:bg-primary-500 rounded-2xl font-bold text-secondary-900 shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-2"
                 >
                   <Zap className="w-5 h-5" />
                   Exhibit at ISUC
                 </button>
                 <button
-                  onClick={() => scrollToSection('register-buyer')}
+                  onClick={() => { setMobileMenuOpen(false); onOpenBuyer(); }}
                   className="w-full py-4 bg-accent-500 hover:bg-accent-400 rounded-2xl font-bold text-secondary-900 shadow-lg shadow-accent-500/20 transition-all flex items-center justify-center gap-2"
                 >
                   <ShieldCheck className="w-5 h-5" />

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Users, BarChart3, Clock } from 'lucide-react';
 
-const FinalCTA = () => {
+const FinalCTA = ({ onOpenExhibit, onOpenBuyer }) => {
   const stats = [
     { icon: <Users className="w-5 h-5" />, value: '150–300', label: 'Verified Buyers' },
     { icon: <BarChart3 className="w-5 h-5" />, value: '60–80', label: 'Meetings / Supplier' },
@@ -72,18 +72,18 @@ const FinalCTA = () => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center items-stretch max-w-4xl mx-auto mb-12">
-              <motion.a 
+              <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="#exhibit" className="btn-primary flex-1 shadow-[0_0_20px_rgba(182,141,64,0.3)] hover:shadow-[0_0_40px_rgba(182,141,64,0.6)] transition-shadow">
+                onClick={onOpenExhibit} className="btn-primary flex-1 shadow-[0_0_20px_rgba(182,141,64,0.3)] hover:shadow-[0_0_40px_rgba(182,141,64,0.6)] transition-shadow text-center flex items-center justify-center">
                 Saudi Suppliers: Exhibit
-              </motion.a>
-              <motion.a 
+              </motion.button>
+              <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="#register-buyer" className="btn-secondary flex-1 border-0 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-shadow">
+                onClick={onOpenBuyer} className="btn-secondary flex-1 border-0 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-shadow text-center flex items-center justify-center">
                 Indian Agents: Apply to Buy
-              </motion.a>
+              </motion.button>
             </div>
 
             <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white/10 backdrop-blur-md px-8 py-4 rounded-full border border-white/20">

@@ -45,12 +45,11 @@ const FeatureCard = ({ icon, title, desc, delay }) => (
   </motion.div>
 );
 
-const ExhibitPage = () => {
+const ExhibitPage = ({ isModalOpen, setIsModalOpen }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start end', 'end start'] });
   const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [1, 1, 0]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const tableFeatures = [
     { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: 'Branded Table in All 3 Cities', desc: 'Your dedicated premium exhibition space across Mumbai, Chennai & Delhi — fully set up and managed.' },

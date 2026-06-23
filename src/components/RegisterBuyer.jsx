@@ -50,11 +50,10 @@ const MarketStat = ({ value, label, sub }) => (
   </div>
 );
 
-const RegisterBuyer = () => {
+const RegisterBuyer = ({ isModalOpen, setIsModalOpen }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start end', 'end start'] });
   const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   
   const benefits = [
     { icon: <Building2 className="w-6 h-6 text-primary-400" />, title: '40+ Saudi Suppliers in Your City', desc: 'Meet top-tier DMCs, 5-star hotels from Makkah & Madinah, and transport giants directly in your own city.', color: 'bg-primary-500', delay: 0.1 },
