@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import WhyISUC from './components/WhyISUC';
-import ShowcaseLogo from './components/ShowcaseLogo';
-import HowItWorks from './components/HowItWorks';
-import WhoShouldAttend from './components/WhoShouldAttend';
-import ExhibitPage from './components/ExhibitPage';
-import RegisterBuyer from './components/RegisterBuyer';
-import TourSchedule from './components/TourSchedule';
-import Venue from './components/Venue';
-import OrganizedBy from './components/OrganizedBy';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
+import {
+  Header,
+  Footer,
+  HeroSection,
+  WhySection,
+  PartnerShowcaseSection,
+  HowItWorksSection,
+  WhoShouldAttendSection,
+  ExhibitSection,
+  RegisterBuyerSection,
+  TourScheduleSection,
+  VenueSection,
+  OrganizedBySection,
+  FinalCTASection,
+} from '@/components';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,19 +25,40 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen bg-secondary-900 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <Header onOpenExhibit={() => setIsExhibitModalOpen(true)} onOpenBuyer={() => setIsBuyerModalOpen(true)} />
-      <Hero onOpenExhibit={() => setIsExhibitModalOpen(true)} onOpenBuyer={() => setIsBuyerModalOpen(true)} />
-      <WhyISUC />
-      <ShowcaseLogo />
-      <HowItWorks />
-      <WhoShouldAttend />
-      <ExhibitPage isModalOpen={isExhibitModalOpen} setIsModalOpen={setIsExhibitModalOpen} />
-      <RegisterBuyer isModalOpen={isBuyerModalOpen} setIsModalOpen={setIsBuyerModalOpen} />
-      <TourSchedule />
-      <Venue />
-      <OrganizedBy />
-      <FinalCTA onOpenExhibit={() => setIsExhibitModalOpen(true)} onOpenBuyer={() => setIsBuyerModalOpen(true)} />
+    <div
+      className={`min-h-screen bg-secondary-900 transition-opacity duration-1000 ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
+    >
+      <Header
+        onOpenExhibit={() => setIsExhibitModalOpen(true)}
+        onOpenBuyer={() => setIsBuyerModalOpen(true)}
+      />
+      <main>
+        <HeroSection
+          onOpenExhibit={() => setIsExhibitModalOpen(true)}
+          onOpenBuyer={() => setIsBuyerModalOpen(true)}
+        />
+        <WhySection />
+        <PartnerShowcaseSection />
+        <HowItWorksSection />
+        <WhoShouldAttendSection />
+        <ExhibitSection
+          isModalOpen={isExhibitModalOpen}
+          setIsModalOpen={setIsExhibitModalOpen}
+        />
+        <RegisterBuyerSection
+          isModalOpen={isBuyerModalOpen}
+          setIsModalOpen={setIsBuyerModalOpen}
+        />
+        <TourScheduleSection />
+        <VenueSection />
+        <OrganizedBySection />
+        <FinalCTASection
+          onOpenExhibit={() => setIsExhibitModalOpen(true)}
+          onOpenBuyer={() => setIsBuyerModalOpen(true)}
+        />
+      </main>
       <Footer />
     </div>
   );

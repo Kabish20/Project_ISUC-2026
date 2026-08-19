@@ -1,0 +1,60 @@
+/**
+ * Sponsorship Tiers, Packages & Benefits Data
+ */
+export const SPONSORSHIP_TIERS = [
+  {
+    iconName: 'Trophy',
+    title: 'Title Partner',
+    emoji: '🥇',
+    tag: 'Most Premium',
+    bestFor: 'Large Saudi DMCs, Hotel Chains',
+    features: [
+      '"Presented by [Your Brand]" across all cities',
+      'Keynote slot + First meeting slot in each city',
+      'Logo on badges, lanyards, backdrop, buyer handbook',
+      '2 tables + 5 delegate passes',
+    ],
+    glowColor: 'rgba(234,179,8,0.3)',
+    borderColor: 'border-yellow-500/40',
+    accentFrom: 'from-yellow-500',
+    accentTo: 'to-accent-400',
+    iconBg: 'bg-yellow-500/10',
+    popular: true,
+  },
+  {
+    iconName: 'Medal',
+    title: 'City Partner',
+    emoji: '🥈',
+    tag: 'City Visibility',
+    bestFor: 'Regional Hotels, Transport Aggregators',
+    features: [
+      '"Mumbai City Partner" / "Delhi City Partner" branding',
+      'Panel speaking opportunity in your city',
+      'Premium table location + dedicated branding',
+    ],
+    glowColor: 'rgba(148,163,184,0.2)',
+    borderColor: 'border-secondary-400/30',
+    accentFrom: 'from-secondary-400',
+    accentTo: 'to-secondary-300',
+    iconBg: 'bg-secondary-400/10',
+    popular: false,
+  },
+  {
+    iconName: 'Award',
+    title: 'Official Partner',
+    emoji: '🥉',
+    tag: 'Category Exclusive',
+    bestFor: 'Tech Platforms, Visa Cos, Airlines',
+    features: [
+      '"Official Transport Partner" / "Official Tech Partner"',
+      'Demo slot + logo in all materials',
+      'Category exclusivity',
+    ],
+    glowColor: 'rgba(180,83,9,0.2)',
+    borderColor: 'border-accent-700/30',
+    accentFrom: 'from-accent-700',
+    accentTo: 'to-accent-500',
+    iconBg: 'bg-accent-700/10',
+    popular: false,
+  },
+];
