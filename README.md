@@ -10,10 +10,9 @@ ISUC-2026 is an exclusive B2B trade corridor platform connecting Saudi DMCs, lux
 ## 📁 Professional Project Structure
 
 ```
-Trade Fair/
+ISUC-2026/
 ├── public/
 │   ├── assets/                           # High-resolution web assets & banners
-│   ├── docs/                             # Official PDF documents & brochures
 │   ├── exbit/                            # Exhibitor brand assets
 │   ├── Main spo/                         # Official main sponsor branding
 │   └── pdf/                              # Event overview and deck downloads
@@ -62,8 +61,7 @@ Trade Fair/
 │   │
 │   ├── constants/                        # Single Source of Truth Configuration
 │   │   ├── siteConfig.js                 # Contact details, phones, emails, event dates
-│   │   ├── formConfig.js                 # Zoho Forms perma IDs & endpoints
-│   │   └── index.js                      # Constants barrel export
+│   │   └── formConfig.js                 # Zoho Forms perma IDs & endpoints
 │   │
 │   ├── data/                             # Decoupled Application Data
 │   │   ├── navigationData.js             # Nav links, mobile menu items, footer links
@@ -76,13 +74,11 @@ Trade Fair/
 │   ├── hooks/                            # Custom React Lifecycle Hooks
 │   │   ├── useScrollPosition.js          # Reactive window scroll tracking
 │   │   ├── useLockBodyScroll.js          # Body scroll locker for open modals/drawers
-│   │   ├── useZohoEmbed.js               # Zoho iframe height listener & URL builder
-│   │   └── index.js                      # Hooks barrel export
+│   │   └── useZohoEmbed.js               # Zoho iframe height listener & URL builder
 │   │
 │   ├── utils/                            # Pure Utility Helpers
 │   │   ├── imageUtils.js                 # HTML5 canvas background remover & logo cache
-│   │   ├── scrollUtils.js                # Smooth scrolling to element anchors
-│   │   └── index.js                      # Utils barrel export
+│   │   └── scrollUtils.js                # Smooth scrolling to element anchors
 │   │
 │   ├── App.jsx                           # Application root orchestrator
 │   ├── index.css                         # Tailwind directives, custom glassmorphism styles
@@ -116,7 +112,7 @@ Trade Fair/
 ### Installation
 ```bash
 # Clone or navigate to project directory
-cd "Trade Fair"
+cd "ISUC-2026"
 
 # Install dependencies
 npm install
