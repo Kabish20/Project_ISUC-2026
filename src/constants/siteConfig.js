@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   cities: ['Mumbai', 'Chennai', 'Delhi'],
   citiesDisplay: 'Mumbai • Chennai • Delhi',
   organizer: '9X EVENTS',
-  brochurePdfUrl: '/pdf/ISUC2026%20BROCHURE%209X.pdf',
+  brochurePdfUrl: '/pdf/isuc-2026-brochure.pdf',
   
   contact: {
     email: 'info@travizly.com',

@@ -7,15 +7,16 @@ ISUC-2026 is an exclusive B2B trade corridor platform connecting Saudi DMCs, lux
 
 ---
 
-## 📁 Professional Project Structure
+## 📁 Clean & Secure Project Structure
 
 ```
 ISUC-2026/
 ├── public/
 │   ├── assets/                           # High-resolution web assets & banners
-│   ├── exbit/                            # Exhibitor brand assets
-│   ├── Main spo/                         # Official main sponsor branding
-│   └── pdf/                              # Event overview and deck downloads
+│   ├── exbit/                            # Sanitized exhibitor brand assets (URL-safe names)
+│   ├── sponsors/                         # Official main sponsor branding
+│   ├── pdf/                              # Event overview brochure (isuc-2026-brochure.pdf)
+│   └── logo.png                          # Production webroot favicon & brandmark
 │
 ├── src/
 │   ├── assets/                           # Static assets bundled with Vite
@@ -33,17 +34,17 @@ ISUC-2026/
 │   │   │   ├── Header.jsx                # Sticky responsive navbar with scroll blur
 │   │   │   ├── TopBar.jsx                # Top bar with contacts & trust badges
 │   │   │   ├── MobileNav.jsx             # Animated fullscreen mobile drawer
-│   │   │   ├── Footer.jsx                # Multi-column footer with quick links
+│   │   │   ├── Footer.jsx                # Multi-column footer with secure external links
 │   │   │   └── index.js                  # Barrel export
 │   │   │
 │   │   ├── modals/                       # Form Dialogs & Zoho Lightboxes
-│   │   │   ├── ExhibitModal.jsx          # Exhibitor Stall Booking Zoho lightbox modal
-│   │   │   ├── BuyerModal.jsx            # Buyer Registration Zoho lightbox modal
+│   │   │   ├── ExhibitModal.jsx          # Sandboxed Exhibitor Stall Booking lightbox
+│   │   │   ├── BuyerModal.jsx            # Sandboxed Buyer Registration lightbox
 │   │   │   └── index.js                  # Barrel export
 │   │   │
 │   │   ├── sections/                     # Landing Page Sections
 │   │   │   ├── HeroSection.jsx           # Hero banner, countdown, and primary CTAs
-│   │   │   ├── WhySection.jsx            # Market opportunity & overview PDF download
+│   │   │   ├── WhySection.jsx            # Market opportunity & brochure PDF download
 │   │   │   ├── PartnerShowcaseSection.jsx# Main sponsor & exhibitor showcase grid
 │   │   │   ├── HowItWorksSection.jsx     # 3-step structured meeting format
 │   │   │   ├── WhoShouldAttendSection.jsx# Saudi suppliers vs. Indian buyers matrix
@@ -51,9 +52,8 @@ ISUC-2026/
 │   │   │   ├── RegisterBuyerSection.jsx  # Buyer application, criteria & FAQ accordion
 │   │   │   ├── TourScheduleSection.jsx   # 6-day multi-city tour itinerary
 │   │   │   ├── VenueSection.jsx          # 4-star luxury venues & guarantee
+│   │   │   ├── SponsorshipSection.jsx    # Official sponsorship packages & inquiry CTA
 │   │   │   ├── OrganizedBySection.jsx    # 9X Events mission & organizer role
-│   │   │   ├── SponsorshipSection.jsx    # Sponsorship tiers overview
-│   │   │   ├── SponsorDeckSection.jsx    # Deep-dive sponsorship presentation deck
 │   │   │   ├── FinalCTASection.jsx       # Dual conversion & table urgency banner
 │   │   │   └── index.js                  # Barrel export
 │   │   │
@@ -74,21 +74,41 @@ ISUC-2026/
 │   ├── hooks/                            # Custom React Lifecycle Hooks
 │   │   ├── useScrollPosition.js          # Reactive window scroll tracking
 │   │   ├── useLockBodyScroll.js          # Body scroll locker for open modals/drawers
-│   │   └── useZohoEmbed.js               # Zoho iframe height listener & URL builder
+│   │   └── useZohoEmbed.js               # Hardened postMessage listener with origin check
 │   │
 │   ├── utils/                            # Pure Utility Helpers
-│   │   ├── imageUtils.js                 # HTML5 canvas background remover & logo cache
+│   │   ├── imageUtils.js                 # Bounded-cache canvas logo background processor
 │   │   └── scrollUtils.js                # Smooth scrolling to element anchors
 │   │
 │   ├── App.jsx                           # Application root orchestrator
 │   ├── index.css                         # Tailwind directives, custom glassmorphism styles
 │   └── main.jsx                          # React 18 DOM entry point
 │
-├── index.html                            # Semantic HTML5, SEO & OpenGraph meta tags
+├── deploy_to_aws.sh                      # Hardened automated deployment & Nginx provisioning
+├── vercel.json                           # Edge security headers & asset caching rules
+├── index.html                            # Hardened HTML5 head, SEO & absolute OpenGraph tags
 ├── tailwind.config.js                    # Metallic gold palette, fonts & animations
 ├── vite.config.js                        # Vite bundler with `@/` path alias support
 └── package.json                          # Dependencies & NPM scripts
 ```
+
+---
+
+## 🛡️ Security Hardening & Protection Overview
+
+This repository has been comprehensively audited and hardened against common web attack vectors:
+
+| Threat / Vulnerability | Attack Vector | Remediation Applied |
+|---|---|---|
+| **Clickjacking / UI Redress** | Phishing frames framing the website | Implemented `X-Frame-Options: SAMEORIGIN` and CSP `frame-ancestors 'none'` in Nginx and Vercel. |
+| **Cross-Window postMessage Hijacking (CWE-345)** | Malicious origins injecting rogue resize events | Added strict regex validation in `useZohoEmbed.js` (`/^https:\/\/[a-z0-9-]+\.(zohopublic\.(in\|com)\|zoho\.(com\|in))$/i`) plus finite bounds checking (200px - 3500px). |
+| **Iframe Privilege Escalation** | Embedded third-party forms taking over parent | Added `sandbox="allow-scripts allow-forms allow-same-origin allow-popups"`, `loading="lazy"`, and `referrerPolicy="strict-origin-when-cross-origin"`. |
+| **MIME-Type Sniffing Attacks** | Browsers executing non-script files as scripts | Enforced `X-Content-Type-Options: nosniff` at HTML meta, Vercel edge, and Nginx reverse proxy. |
+| **Information Disclosure / Server Fingerprinting** | Attackers targeting specific Nginx or OS versions | Set `server_tokens off;` and parameterized origin IPs in `deploy_to_aws.sh`. |
+| **Sensitive File & Dotfile Exposure** | Direct downloads of `.env`, `.git`, or backup files | Added Nginx block rules `location ~ /\.(?!well-known) { deny all; }` and blocked extensions (`.bak`, `.env`, `.config`, `.sql`, `.sh`, `.log`). |
+| **Supply Chain / Dependency Tampering** | Floated dependencies pulled during server deploy | Migrated `deploy_to_aws.sh` to use deterministic `npm ci` with cryptographic lockfile validation. |
+| **Secret Leaks via Git** | Developers committing credentials or certs | Expanded `.gitignore` with strict patterns for private keys (`*.pem`, `*.key`), AWS credentials, and `.env*`. |
+| **Reverse Tabnabbing** | External target `_blank` manipulating `window.opener` | Configured `rel="noopener noreferrer"` and click guards on external links. |
 
 ---
 
@@ -99,14 +119,14 @@ ISUC-2026/
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom Metallic Gold tokens & glassmorphism
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Forms**: Embedded [Zoho Forms](https://www.zoho.com/forms/) with dynamic responsive height listener
+- **Forms**: Embedded [Zoho Forms](https://www.zoho.com/forms/) with hardened responsive height listener
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v16.0 or higher recommended)
+- Node.js (v18.0 or higher recommended)
 - npm or yarn
 
 ### Installation
@@ -114,7 +134,7 @@ ISUC-2026/
 # Clone or navigate to project directory
 cd "ISUC-2026"
 
-# Install dependencies
+# Install verified dependencies
 npm install
 
 # Start local development server
@@ -148,10 +168,12 @@ npm run preview
 
 ## 🌐 Deployment (AWS / Cloud / Static Host)
 
-The build output is located in the `dist/` directory and can be deployed directly to AWS S3 + CloudFront, Vercel, Netlify, or any static web hosting provider.
+The build output is located in the `dist/` directory and can be deployed directly to AWS S3 + CloudFront, Vercel, Netlify, or Ubuntu/Nginx EC2 servers using our hardened deployment script:
 
 ```bash
-npm run build
+# On Ubuntu EC2 host:
+chmod +x deploy_to_aws.sh
+./deploy_to_aws.sh
 ```
 
 ---

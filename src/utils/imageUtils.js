@@ -65,9 +65,17 @@ export const processLogoBackground = (src, callback) => {
 
         ctx.putImageData(imageData, 0, 0);
         const processedUrl = canvas.toDataURL();
+        if (processedLogosCache.size > 50) {
+          const firstKey = processedLogosCache.keys().next().value;
+          processedLogosCache.delete(firstKey);
+        }
         processedLogosCache.set(src, processedUrl);
         callback(processedUrl);
       } else {
+        if (processedLogosCache.size > 50) {
+          const firstKey = processedLogosCache.keys().next().value;
+          processedLogosCache.delete(firstKey);
+        }
         processedLogosCache.set(src, src);
         callback(src);
       }

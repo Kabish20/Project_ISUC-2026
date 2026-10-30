@@ -137,6 +137,9 @@ export const BuyerModal = ({ isOpen, onClose }) => {
             src={getIframeSrc()}
             style={{ border: 'none', minWidth: '100%', overflow: 'hidden', height: '100%' }}
             title={FORM_CONFIG.buyer.title}
+            sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
           />
         </div>
         <div

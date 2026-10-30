@@ -115,6 +115,9 @@ export const ExhibitModal = ({ isOpen, onClose }) => {
             src={FORM_CONFIG.exhibitor.src}
             style={{ border: 'none', minWidth: '100%', overflow: 'hidden', height: '100%' }}
             title={FORM_CONFIG.exhibitor.title}
+            sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
           />
         </div>
         <div

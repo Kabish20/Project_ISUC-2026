@@ -51,6 +51,11 @@ export const Footer = () => {
             <div className="flex gap-3">
               <a
                 href={SITE_CONFIG.socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  if (SITE_CONFIG.socialLinks.linkedin === '#') e.preventDefault();
+                }}
                 aria-label="LinkedIn"
                 className="w-9 h-9 rounded-full bg-secondary-800 flex items-center justify-center text-secondary-400 hover:bg-primary-700 hover:text-white transition-all duration-200 hover:scale-110"
               >
@@ -60,6 +65,11 @@ export const Footer = () => {
               </a>
               <a
                 href={SITE_CONFIG.socialLinks.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  if (SITE_CONFIG.socialLinks.instagram === '#') e.preventDefault();
+                }}
                 aria-label="Instagram"
                 className="w-9 h-9 rounded-full bg-secondary-800 flex items-center justify-center text-secondary-400 hover:bg-pink-600 hover:text-white transition-all duration-200 hover:scale-110"
               >

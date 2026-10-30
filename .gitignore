@@ -1,4 +1,4 @@
-# Logs
+# Logs and Runtime Errors
 logs
 *.log
 npm-debug.log*
@@ -7,18 +7,50 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies and Builds
+node_modules/
+dist/
+dist-ssr/
+.vite/
+.eslintcache
+.cache/
+
+# Environment Variables & Secrets Leak Protection
+.env
+.env.*
+!.env.example
 *.local
+*.secrets
+aws-credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+*.id_rsa
+*.pub
+
+# Backups and Temporary Files
+*.bak
+*.tmp
+*~
+*.swp
+*.swo
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+!.vscode/settings.json
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?

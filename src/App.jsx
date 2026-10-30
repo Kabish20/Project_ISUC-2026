@@ -11,6 +11,7 @@ import {
   RegisterBuyerSection,
   TourScheduleSection,
   VenueSection,
+  SponsorshipSection,
   OrganizedBySection,
   FinalCTASection,
 } from '@/components';
@@ -53,6 +54,7 @@ function App() {
         />
         <TourScheduleSection />
         <VenueSection />
+        <SponsorshipSection />
         <OrganizedBySection />
         <FinalCTASection
           onOpenExhibit={() => setIsExhibitModalOpen(true)}

@@ -8,6 +8,7 @@ export const NAV_LINKS = [
   { id: 'attendees', label: 'Who Should Attend', iconName: 'Users' },
   { id: 'schedule', label: 'Tour Schedule', iconName: 'Calendar' },
   { id: 'venue', label: 'Venues', iconName: 'MapPin' },
+  { id: 'sponsors', label: 'Sponsorship', iconName: 'Award' },
   { id: 'organizer', label: 'Organizer', iconName: 'Building2' },
 ];
 
@@ -17,6 +18,7 @@ export const MOBILE_NAV_ITEMS = [
   { id: 'attendees', label: 'Who Should Attend', iconName: 'Users' },
   { id: 'schedule', label: 'Tour Schedule', iconName: 'Calendar' },
   { id: 'venue', label: 'Premium Venues', iconName: 'MapPin' },
+  { id: 'sponsors', label: 'Sponsorship Packages', iconName: 'Award' },
   { id: 'organizer', label: 'About Organizer', iconName: 'Building2' },
 ];
 
@@ -27,6 +29,7 @@ export const FOOTER_QUICK_LINKS = [
   { label: 'Event Format', id: 'format' },
   { label: 'Tour Schedule', id: 'schedule' },
   { label: 'Venue & Hotels', id: 'venue' },
+  { label: 'Sponsorship Tiers', id: 'sponsors' },
 ];
 
 export const FOOTER_CTA_LINKS = [

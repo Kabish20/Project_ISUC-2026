@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Sparkles } from 'lucide-react';
+import { Check, Sparkles, Mail } from 'lucide-react';
 import { SPONSORSHIP_TIERS } from '@/data/sponsorshipData';
+import { SITE_CONFIG } from '@/constants/siteConfig';
 
 /**
  * Sponsorship Packages & Tiers Section
  */
 export const SponsorshipSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-secondary-900">
+    <section id="sponsors" className="py-24 relative overflow-hidden bg-secondary-900">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <motion.img
@@ -133,10 +134,10 @@ export const SponsorshipSection = () => {
           className="text-center"
         >
           <a
-            href="#sponsor-deck"
+            href={SITE_CONFIG.contact.sponsorshipEmailHref}
             className="inline-flex items-center gap-3 px-10 py-5 text-lg font-bold bg-gradient-to-r from-accent-500 to-orange-500 hover:from-accent-400 hover:to-orange-400 text-secondary-900 rounded-2xl shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:shadow-[0_0_50px_rgba(245,158,11,0.6)] transition-all duration-300 hover:-translate-y-1"
           >
-            <Sparkles className="w-5 h-5" />
+            <Mail className="w-5 h-5" />
             Request Sponsor Deck & Pricing
             <span className="transition-transform">→</span>
           </a>

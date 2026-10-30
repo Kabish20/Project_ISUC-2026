@@ -9,5 +9,4 @@ export * from './TourScheduleSection';
 export * from './VenueSection';
 export * from './OrganizedBySection';
 export * from './SponsorshipSection';
-export * from './SponsorDeckSection';
 export * from './FinalCTASection';
